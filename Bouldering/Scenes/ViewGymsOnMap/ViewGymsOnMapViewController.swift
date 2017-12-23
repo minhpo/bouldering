@@ -11,7 +11,6 @@
 //
 
 import UIKit
-import CoreLocation
 import MapKit
 
 protocol ViewGymsOnMapDisplayLogic: class {
@@ -20,10 +19,15 @@ protocol ViewGymsOnMapDisplayLogic: class {
 
 class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
+    @IBInspectable var poiImage: UIImage!
+    @IBOutlet weak var mapView: MKMapView! {
+        didSet {
+            mapView.delegate = self
+        }
+    }
+    
     var interactor: ViewGymsOnMapBusinessLogic?
     var router: (NSObjectProtocol & ViewGymsOnMapRoutingLogic & ViewGymsOnMapDataPassing)?
-    
-    @IBOutlet weak var mapView: MKMapView!
     
     // MARK: Object lifecycle
     
@@ -64,14 +68,32 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     func display(viewModels: [GymPoiViewModel]) {
         let annotations = viewModels.map { viewModel -> MKAnnotation in
-            let annotation = MKPointAnnotation()
-            annotation.title = viewModel.name
-            annotation.coordinate = CLLocationCoordinate2D(latitude: viewModel.latitude, longitude: viewModel.longitude)
+            let title = viewModel.name
+            let coordinate = CLLocationCoordinate2D(latitude: viewModel.latitude, longitude: viewModel.longitude)
             
-            return annotation
+            return GymPoiAnnotation(title: title, coordinate: coordinate)
         }
         
         self.mapView.addAnnotations(annotations)
+    }
+    
+}
+
+extension ViewGymsOnMapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let gymPoiAnnotation = annotation as? GymPoiAnnotation else { return nil }
+        
+        let identifier = "marker"
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            ?? MKAnnotationView(annotation: gymPoiAnnotation, reuseIdentifier: identifier)
+        annotationView.image = poiImage
+        annotationView.annotation = gymPoiAnnotation
+        
+        annotationView.bounds.size = CGSize(width: 30, height: 33)
+        annotationView.centerOffset = CGPoint(x: 0, y: -annotationView.bounds.midY)
+        
+        return annotationView
     }
     
 }

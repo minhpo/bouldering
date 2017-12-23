@@ -31,6 +31,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="poiImage" value="Image"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="mapView" destination="zfB-jP-QJe" id="ggZ-Lw-xtE"/>
                     </connections>
@@ -39,4 +42,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="60" height="66"/>
+    </resources>
 </document>
