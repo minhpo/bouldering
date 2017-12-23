@@ -22,10 +22,8 @@ class GymRepository {
         let path = "\(fileManager.currentDirectoryPath)/Output/gyms.json"
         
         do {
-            // Write contents to file
             try jsonString.write(toFile: path, atomically: false, encoding: .utf8)
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             print("Ooops! Something went wrong: \(error)")
         }
     }

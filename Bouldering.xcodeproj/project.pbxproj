@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461482061FEEADBA006466EE /* LaunchScreen.storyboard */; };
+		461482091FEEADBB006466EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461482071FEEADBB006466EE /* Main.storyboard */; };
+		461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */; };
+		461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */; };
+		461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */; };
+		461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */; };
 		469E26B61FEE8C0D00CB303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E26B51FEE8C0D00CB303B /* AppDelegate.swift */; };
-		469E26B81FEE8C0D00CB303B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E26B71FEE8C0D00CB303B /* ViewController.swift */; };
-		469E26BB1FEE8C0D00CB303B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E26B91FEE8C0D00CB303B /* Main.storyboard */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
-		469E26C01FEE8C0D00CB303B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BE1FEE8C0D00CB303B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		461482061FEEADBA006466EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		461482071FEEADBB006466EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapPresenter.swift; sourceTree = "<group>"; };
+		4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapRouter.swift; sourceTree = "<group>"; };
+		4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapViewController.swift; sourceTree = "<group>"; };
+		461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapInteractor.swift; sourceTree = "<group>"; };
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26B51FEE8C0D00CB303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		469E26B71FEE8C0D00CB303B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		469E26BA1FEE8C0D00CB303B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		469E26BF1FEE8C0D00CB303B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +41,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461482031FEEAD8B006466EE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4614820A1FEEADD8006466EE /* ViewGymsOnMap */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		461482041FEEAD94006466EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				461482061FEEADBA006466EE /* LaunchScreen.storyboard */,
+				461482071FEEADBB006466EE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		461482051FEEAD9A006466EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4614820A1FEEADD8006466EE /* ViewGymsOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */,
+				4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */,
+				4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */,
+				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
+			);
+			path = ViewGymsOnMap;
+			sourceTree = "<group>";
+		};
 		469E26A91FEE8C0D00CB303B = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				469E26B51FEE8C0D00CB303B /* AppDelegate.swift */,
-				469E26B71FEE8C0D00CB303B /* ViewController.swift */,
-				469E26B91FEE8C0D00CB303B /* Main.storyboard */,
 				469E26BC1FEE8C0D00CB303B /* Assets.xcassets */,
-				469E26BE1FEE8C0D00CB303B /* LaunchScreen.storyboard */,
 				469E26C11FEE8C0D00CB303B /* Info.plist */,
+				461482051FEEAD9A006466EE /* Common */,
+				461482031FEEAD8B006466EE /* Scenes */,
+				461482041FEEAD94006466EE /* Storyboards */,
 			);
 			path = Bouldering;
 			sourceTree = "<group>";
@@ -74,6 +115,7 @@
 				469E26AE1FEE8C0D00CB303B /* Sources */,
 				469E26AF1FEE8C0D00CB303B /* Frameworks */,
 				469E26B01FEE8C0D00CB303B /* Resources */,
+				461482171FEEAE2C006466EE /* Run Script - Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -123,44 +165,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469E26C01FEE8C0D00CB303B /* LaunchScreen.storyboard in Resources */,
+				461482091FEEADBB006466EE /* Main.storyboard in Resources */,
 				469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */,
-				469E26BB1FEE8C0D00CB303B /* Main.storyboard in Resources */,
+				461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		461482171FEEAE2C006466EE /* Run Script - Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint lint --config .swiftlint.yml\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		469E26AE1FEE8C0D00CB303B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469E26B81FEE8C0D00CB303B /* ViewController.swift in Sources */,
+				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
+				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
+				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
 				469E26B61FEE8C0D00CB303B /* AppDelegate.swift in Sources */,
+				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		469E26B91FEE8C0D00CB303B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				469E26BA1FEE8C0D00CB303B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		469E26BE1FEE8C0D00CB303B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				469E26BF1FEE8C0D00CB303B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		469E26C21FEE8C0D00CB303B /* Debug */ = {
