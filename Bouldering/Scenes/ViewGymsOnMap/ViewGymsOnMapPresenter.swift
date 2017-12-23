@@ -13,6 +13,7 @@
 import UIKit
 
 protocol ViewGymsOnMapPresentationLogic {
+    func display(gyms: [Gym])
 }
 
 class ViewGymsOnMapPresenter: ViewGymsOnMapPresentationLogic {
@@ -21,4 +22,15 @@ class ViewGymsOnMapPresenter: ViewGymsOnMapPresentationLogic {
     
     // MARK: Do something
     
+    func display(gyms: [Gym]) {
+        DispatchQueue.main.async {
+            let viewModels = gyms.map {
+                GymPoiViewModel(name: $0.name,
+                                latitude: $0.coordinates.latitude,
+                                longitude: $0.coordinates.longitude)
+            }
+            
+            self.viewController?.display(viewModels: viewModels)
+        }
+    }
 }

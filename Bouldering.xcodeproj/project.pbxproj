@@ -13,9 +13,26 @@
 		461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */; };
 		461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */; };
 		461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */; };
+		4614821B1FEEB348006466EE /* gyms.json in Resources */ = {isa = PBXBuildFile; fileRef = 4614821A1FEEB348006466EE /* gyms.json */; };
+		4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614821D1FEEB3A3006466EE /* Coordinates.swift */; };
+		461482201FEEB3B3006466EE /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614821F1FEEB3B3006466EE /* Gym.swift */; };
+		461482331FEEB64A006466EE /* GymsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461482321FEEB64A006466EE /* GymsRepository.swift */; };
+		461482361FEEB8EE006466EE /* GymsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461482351FEEB8EE006466EE /* GymsRepositoryTests.swift */; };
+		461482391FEEBA53006466EE /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461482381FEEBA53006466EE /* ServiceLocator.swift */; };
+		4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */; };
 		469E26B61FEE8C0D00CB303B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E26B51FEE8C0D00CB303B /* AppDelegate.swift */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4614822A1FEEB450006466EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469E26AA1FEE8C0D00CB303B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469E26B11FEE8C0D00CB303B;
+			remoteInfo = Bouldering;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		461482061FEEADBA006466EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -24,6 +41,15 @@
 		4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapRouter.swift; sourceTree = "<group>"; };
 		4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapViewController.swift; sourceTree = "<group>"; };
 		461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapInteractor.swift; sourceTree = "<group>"; };
+		4614821A1FEEB348006466EE /* gyms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gyms.json; sourceTree = "<group>"; };
+		4614821D1FEEB3A3006466EE /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		4614821F1FEEB3B3006466EE /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		461482251FEEB450006466EE /* BoulderingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoulderingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		461482291FEEB450006466EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461482321FEEB64A006466EE /* GymsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsRepository.swift; sourceTree = "<group>"; };
+		461482351FEEB8EE006466EE /* GymsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymsRepositoryTests.swift; sourceTree = "<group>"; };
+		461482381FEEBA53006466EE /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymPoiViewModel.swift; sourceTree = "<group>"; };
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26B51FEE8C0D00CB303B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		461482221FEEB450006466EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		469E26AF1FEE8C0D00CB303B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +94,9 @@
 		461482051FEEAD9A006466EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				461482371FEEBA31006466EE /* DependencyInversion */,
+				4614821C1FEEB38D006466EE /* DomainModels */,
+				461482311FEEB5A2006466EE /* GymsRepository */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -68,18 +104,78 @@
 		4614820A1FEEADD8006466EE /* ViewGymsOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */,
+				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
 				4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */,
 				4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */,
 				4614820F1FEEAE0B006466EE /* ViewGymsOnMapViewController.swift */,
-				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
 			);
 			path = ViewGymsOnMap;
+			sourceTree = "<group>";
+		};
+		461482181FEEB325006466EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				461482191FEEB330006466EE /* Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		461482191FEEB330006466EE /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				4614821A1FEEB348006466EE /* gyms.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		4614821C1FEEB38D006466EE /* DomainModels */ = {
+			isa = PBXGroup;
+			children = (
+				4614821D1FEEB3A3006466EE /* Coordinates.swift */,
+				4614821F1FEEB3B3006466EE /* Gym.swift */,
+			);
+			path = DomainModels;
+			sourceTree = "<group>";
+		};
+		461482261FEEB450006466EE /* BoulderingTests */ = {
+			isa = PBXGroup;
+			children = (
+				461482341FEEB8B1006466EE /* GymsRepositoryTests */,
+				461482291FEEB450006466EE /* Info.plist */,
+			);
+			path = BoulderingTests;
+			sourceTree = "<group>";
+		};
+		461482311FEEB5A2006466EE /* GymsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				461482321FEEB64A006466EE /* GymsRepository.swift */,
+			);
+			path = GymsRepository;
+			sourceTree = "<group>";
+		};
+		461482341FEEB8B1006466EE /* GymsRepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				461482351FEEB8EE006466EE /* GymsRepositoryTests.swift */,
+			);
+			path = GymsRepositoryTests;
+			sourceTree = "<group>";
+		};
+		461482371FEEBA31006466EE /* DependencyInversion */ = {
+			isa = PBXGroup;
+			children = (
+				461482381FEEBA53006466EE /* ServiceLocator.swift */,
+			);
+			path = DependencyInversion;
 			sourceTree = "<group>";
 		};
 		469E26A91FEE8C0D00CB303B = {
 			isa = PBXGroup;
 			children = (
 				469E26B41FEE8C0D00CB303B /* Bouldering */,
+				461482261FEEB450006466EE /* BoulderingTests */,
 				469E26B31FEE8C0D00CB303B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				469E26B21FEE8C0D00CB303B /* Bouldering.app */,
+				461482251FEEB450006466EE /* BoulderingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +196,7 @@
 				469E26BC1FEE8C0D00CB303B /* Assets.xcassets */,
 				469E26C11FEE8C0D00CB303B /* Info.plist */,
 				461482051FEEAD9A006466EE /* Common */,
+				461482181FEEB325006466EE /* Resources */,
 				461482031FEEAD8B006466EE /* Scenes */,
 				461482041FEEAD94006466EE /* Storyboards */,
 			);
@@ -108,6 +206,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		461482241FEEB450006466EE /* BoulderingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4614822C1FEEB450006466EE /* Build configuration list for PBXNativeTarget "BoulderingTests" */;
+			buildPhases = (
+				461482211FEEB450006466EE /* Sources */,
+				461482221FEEB450006466EE /* Frameworks */,
+				461482231FEEB450006466EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4614822B1FEEB450006466EE /* PBXTargetDependency */,
+			);
+			name = BoulderingTests;
+			productName = BoulderingTests;
+			productReference = 461482251FEEB450006466EE /* BoulderingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		469E26B11FEE8C0D00CB303B /* Bouldering */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 469E26C41FEE8C0D00CB303B /* Build configuration list for PBXNativeTarget "Bouldering" */;
@@ -136,6 +252,12 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Mobairu;
 				TargetAttributes = {
+					461482241FEEB450006466EE = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 469E26B11FEE8C0D00CB303B;
+					};
 					469E26B11FEE8C0D00CB303B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -156,16 +278,25 @@
 			projectRoot = "";
 			targets = (
 				469E26B11FEE8C0D00CB303B /* Bouldering */,
+				461482241FEEB450006466EE /* BoulderingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		461482231FEEB450006466EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		469E26B01FEE8C0D00CB303B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				461482091FEEADBB006466EE /* Main.storyboard in Resources */,
+				4614821B1FEEB348006466EE /* gyms.json in Resources */,
 				469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */,
 				461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */,
 			);
@@ -191,13 +322,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		461482211FEEB450006466EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461482361FEEB8EE006466EE /* GymsRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		469E26AE1FEE8C0D00CB303B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461482391FEEBA53006466EE /* ServiceLocator.swift in Sources */,
 				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
 				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
+				461482331FEEB64A006466EE /* GymsRepository.swift in Sources */,
+				4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */,
+				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
+				4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */,
 				469E26B61FEE8C0D00CB303B /* AppDelegate.swift in Sources */,
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
 			);
@@ -205,7 +349,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4614822B1FEEB450006466EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469E26B11FEE8C0D00CB303B /* Bouldering */;
+			targetProxy = 4614822A1FEEB450006466EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4614822D1FEEB450006466EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2JNQ4GB55;
+				INFOPLIST_FILE = BoulderingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.mpsam.bouldering.BoulderingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bouldering.app/Bouldering";
+			};
+			name = Debug;
+		};
+		4614822E1FEEB450006466EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2JNQ4GB55;
+				INFOPLIST_FILE = BoulderingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.mpsam.bouldering.BoulderingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bouldering.app/Bouldering";
+			};
+			name = Release;
+		};
 		469E26C21FEE8C0D00CB303B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,6 +535,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4614822C1FEEB450006466EE /* Build configuration list for PBXNativeTarget "BoulderingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4614822D1FEEB450006466EE /* Debug */,
+				4614822E1FEEB450006466EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		469E26AD1FEE8C0D00CB303B /* Build configuration list for PBXProject "Bouldering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

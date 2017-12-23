@@ -1,0 +1,225 @@
+[
+  {
+    "housenumber" : 6,
+    "postalCode" : "1326AB",
+    "coordinates" : {
+      "longitude" : 5.2378263999999994,
+      "latitude" : 52.375709399999998
+    },
+    "name" : "Impact boulderhal",
+    "city" : "Almere",
+    "address" : "Bongerdstraat"
+  },
+  {
+    "housenumber" : 314,
+    "postalCode" : "3812BH",
+    "coordinates" : {
+      "longitude" : 5.3649222999999999,
+      "latitude" : 52.1566592
+    },
+    "name" : "Kei Boulderhal",
+    "city" : "Amersfoort",
+    "address" : "Soesterweg"
+  },
+  {
+    "housenumber" : 26,
+    "postalCode" : "1021KB",
+    "coordinates" : {
+      "longitude" : 4.9292669999999994,
+      "latitude" : 52.383476999999999
+    },
+    "name" : "Monk Bouldergym Amsterdam",
+    "city" : "Amsterdam",
+    "address" : "Aambeeldstraat"
+  },
+  {
+    "housenumber" : 32,
+    "postalCode" : "1014AK",
+    "coordinates" : {
+      "longitude" : 4.8515331000000002,
+      "latitude" : 52.392175599999987
+    },
+    "name" : "Het Lab Amsterdam",
+    "city" : "Amsterdam",
+    "address" : "Transformatorweg"
+  },
+  {
+    "housenumber" : 3,
+    "postalCode" : "6832EL",
+    "coordinates" : {
+      "longitude" : 5.9004651999999993,
+      "latitude" : 51.963087000000002
+    },
+    "name" : "RijnBoulder",
+    "city" : "Arnhem",
+    "address" : "Olympus"
+  },
+  {
+    "address" : "Spinveld",
+    "city" : "Breda",
+    "postalCode" : "4815HT",
+    "housenumber" : 66,
+    "coordinates" : {
+      "longitude" : 4.7556900000000004,
+      "latitude" : 51.598244000000001
+    },
+    "postfix" : "A1",
+    "name" : "Boulderhal Bruut"
+  },
+  {
+    "housenumber" : 15,
+    "postalCode" : "2627AN",
+    "coordinates" : {
+      "longitude" : 4.3675287999999997,
+      "latitude" : 51.9946245
+    },
+    "name" : "Bouldercentrum Delfts Bleau",
+    "city" : "Delft",
+    "address" : "Schieweg"
+  },
+  {
+    "housenumber" : 55,
+    "postalCode" : "2544CV",
+    "coordinates" : {
+      "longitude" : 4.2543625999999994,
+      "latitude" : 52.049688600000003
+    },
+    "name" : "Boulderhal De Campus",
+    "city" : "Den Haag",
+    "address" : "Kerketuinenweg"
+  },
+  {
+    "housenumber" : 10,
+    "postalCode" : "2544NL",
+    "coordinates" : {
+      "longitude" : 4.2404599999999997,
+      "latitude" : 52.038623999999999
+    },
+    "name" : "Bouldermuur Den Haag",
+    "city" : "Den Haag",
+    "address" : "Jaap Edenweg"
+  },
+  {
+    "housenumber" : 2,
+    "postalCode" : "5616LW",
+    "coordinates" : {
+      "longitude" : 5.4614919999999998,
+      "latitude" : 51.446244
+    },
+    "name" : "Monk Bouldergym Eindhoven",
+    "city" : "Eindhoven",
+    "address" : "Glaslaan"
+  },
+  {
+    "housenumber" : 49,
+    "postalCode" : "7511ZA",
+    "coordinates" : {
+      "longitude" : 6.9036738999999994,
+      "latitude" : 52.223027999999999
+    },
+    "name" : "Cube Bouldergym",
+    "city" : "Enschede",
+    "address" : "Hoge Bothofstraat"
+  },
+  {
+    "housenumber" : 8,
+    "postalCode" : "9731BS",
+    "coordinates" : {
+      "longitude" : 6.5897262999999997,
+      "latitude" : 53.230609600000001
+    },
+    "name" : "Gropo Bouldergym",
+    "city" : "Groningen",
+    "address" : "Ulgersmaweg"
+  },
+  {
+    "address" : "Rooseveltstraat",
+    "city" : "Leiden",
+    "postalCode" : "2321BL",
+    "housenumber" : 49,
+    "coordinates" : {
+      "longitude" : 4.4810169999999996,
+      "latitude" : 52.145052
+    },
+    "postfix" : "E",
+    "name" : "Boulderhal Kunststof"
+  },
+  {
+    "housenumber" : 35,
+    "postalCode" : "6533HK",
+    "coordinates" : {
+      "longitude" : 5.8383910999999999,
+      "latitude" : 51.813086499999997
+    },
+    "name" : "Grip Boulderhal",
+    "city" : "Nijmegen",
+    "address" : "Kamerlingh Onnesstraat"
+  },
+  {
+    "housenumber" : 9,
+    "postalCode" : "3029BP",
+    "coordinates" : {
+      "longitude" : 4.4333141999999999,
+      "latitude" : 51.908203999999998
+    },
+    "name" : "Bolder Neoliet",
+    "city" : "Rotterdam",
+    "address" : "Keilestraat"
+  },
+  {
+    "housenumber" : 183,
+    "postalCode" : "3051KC",
+    "coordinates" : {
+      "longitude" : 4.4732820000000002,
+      "latitude" : 51.941622000000002
+    },
+    "name" : "Monk Bouldergym Rotterdam",
+    "city" : "Rotterdam",
+    "address" : "Ceintuurbaan"
+  },
+  {
+    "housenumber" : 47,
+    "postalCode" : "5013BJ",
+    "coordinates" : {
+      "longitude" : 5.0920671999999998,
+      "latitude" : 51.577022100000001
+    },
+    "name" : "Boulderhal Block013",
+    "city" : "Tilburg",
+    "address" : "Lovense Kanaaldijk"
+  },
+  {
+    "housenumber" : 2,
+    "postalCode" : "6135KC",
+    "coordinates" : {
+      "longitude" : 5.8579093999999996,
+      "latitude" : 51.002787599999998
+    },
+    "name" : "Graviton Bouldergym",
+    "city" : "Sittard",
+    "address" : "Geerweg"
+  },
+  {
+    "address" : "Elektronweg",
+    "city" : "Utrecht",
+    "postalCode" : "3542AC",
+    "housenumber" : 10,
+    "coordinates" : {
+      "longitude" : 5.0709244,
+      "latitude" : 52.099984599999999
+    },
+    "postfix" : "A",
+    "name" : "Boulderhal Energiehaven"
+  },
+  {
+    "housenumber" : 4,
+    "postalCode" : "3527LD",
+    "coordinates" : {
+      "longitude" : 5.1083181,
+      "latitude" : 52.076385100000003
+    },
+    "name" : "Boulderhal Sterk",
+    "city" : "Utrecht",
+    "address" : "Koningin Wilhelminalaan"
+  }
+]

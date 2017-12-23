@@ -11,14 +11,19 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 protocol ViewGymsOnMapDisplayLogic: class {
+    func display(viewModels: [GymPoiViewModel])
 }
 
 class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     var interactor: ViewGymsOnMapBusinessLogic?
     var router: (NSObjectProtocol & ViewGymsOnMapRoutingLogic & ViewGymsOnMapDataPassing)?
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     // MARK: Object lifecycle
     
@@ -36,7 +41,7 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = ViewGymsOnMapInteractor()
+        let interactor = ViewGymsOnMapInteractor(gymsRepository: ServiceLocator.default.gymsRepository)
         let presenter = ViewGymsOnMapPresenter()
         let router = ViewGymsOnMapRouter()
         viewController.interactor = interactor
@@ -51,8 +56,22 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interactor?.start()
     }
     
     // MARK: Do something
+    
+    func display(viewModels: [GymPoiViewModel]) {
+        let annotations = viewModels.map { viewModel -> MKAnnotation in
+            let annotation = MKPointAnnotation()
+            annotation.title = viewModel.name
+            annotation.coordinate = CLLocationCoordinate2D(latitude: viewModel.latitude, longitude: viewModel.longitude)
+            
+            return annotation
+        }
+        
+        self.mapView.addAnnotations(annotations)
+    }
     
 }

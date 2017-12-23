@@ -17,9 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-jP-QJe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zfB-jP-QJe" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="esV-7z-b8K"/>
+                            <constraint firstItem="zfB-jP-QJe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iNH-K7-kJS"/>
+                            <constraint firstItem="zfB-jP-QJe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ujz-q5-Xh8"/>
+                            <constraint firstItem="zfB-jP-QJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wIP-YR-UZ4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="zfB-jP-QJe" id="ggZ-Lw-xtE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

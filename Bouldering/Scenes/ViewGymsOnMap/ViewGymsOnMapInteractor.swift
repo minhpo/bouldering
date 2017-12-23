@@ -13,6 +13,7 @@
 import UIKit
 
 protocol ViewGymsOnMapBusinessLogic {
+    func start()
 }
 
 protocol ViewGymsOnMapDataStore {
@@ -22,6 +23,18 @@ class ViewGymsOnMapInteractor: ViewGymsOnMapBusinessLogic, ViewGymsOnMapDataStor
     
     var presenter: ViewGymsOnMapPresentationLogic?
     
+    let gymsRepository: GymsRepository
+    
+    init(gymsRepository: GymsRepository) {
+        self.gymsRepository = gymsRepository
+    }
+    
     // MARK: Do something
     
+    func start() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let gyms = self.gymsRepository.getAllGyms()
+            self.presenter?.display(gyms: gyms)
+        }
+    }
 }
