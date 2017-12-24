@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Bouldering
+
+  Created by Po Sam on 23/12/2017.
+  Copyright © 2017 Mobairu. All rights reserved.
+*/
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Bouldering heeft toegang nodig tot de locatie van uw telefoon zodat u kunt inchecken bij een boulderhal.";
+"NSLocationWhenInUseUsageDescription" = "Bouldering heeft toegang nodig tot de locatie van uw telefoon zodat u kunt inchecken bij een boulderhal.";
+"NSLocationAlwaysUsageDescription" = "Bouldering heeft toegang nodig tot de locatie van uw telefoon zodat u kunt inchecken bij een boulderhal.";

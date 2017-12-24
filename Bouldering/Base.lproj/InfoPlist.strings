@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Bouldering
+
+  Created by Po Sam on 23/12/2017.
+  Copyright © 2017 Mobairu. All rights reserved.
+*/
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Bouldering requires access to your phone’s location to let you check in at a gym.";
+"NSLocationWhenInUseUsageDescription" = "Bouldering requires access to your phone’s location to let you check in at a gym";
+"NSLocationAlwaysUsageDescription" = "Bouldering requires access to your phone’s location to let you check in at a gym";
