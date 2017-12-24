@@ -12,9 +12,14 @@ class ServiceLocator {
     
     static let `default`: ServiceLocator = ServiceLocator()
     
-     lazy private(set) var gymsRepository: GymsRepository = {
+    lazy private(set) var gymsRepository: GymsRepository = {
         let repository: GymsRepository = GymsFileRepository()
         return repository
-        }()
+    }()
+    
+    lazy private(set) var locationMonitor: LocationMonitor = {
+        let locationMonitor: LocationMonitor = LocationManager()
+        return locationMonitor
+    }()
     
 }
