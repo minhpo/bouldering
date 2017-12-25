@@ -21,7 +21,9 @@ class BoulderingInitialiser: ApplicationInitialiser {
     }
     
     func start() {
-        startLocationMonitoring()
+        DispatchQueue.global(qos: .utility).async {
+            self.startRegionMonitoring()
+        }
     }
     
     private func startLocationMonitoring() {
@@ -35,4 +37,19 @@ class BoulderingInitialiser: ApplicationInitialiser {
         }
     }
     
+    private func startRegionMonitoring() {
+        let monitor = serviceLocator.regionMonitor
+        if monitor.isEnabled {
+            monitor.start()
+        } else {
+            let group = DispatchGroup()
+            group.enter()
+            monitor.enable(completion: {
+                monitor.start()
+                group.leave()
+            }, failure: {
+                group.leave()
+            })
+        }
+    }
 }

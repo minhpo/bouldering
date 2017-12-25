@@ -27,6 +27,8 @@
 		4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */; };
 		4657C1441FEF2797006DE79B /* ApplicationInitialiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
+		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
+		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
+		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				4657C13B1FEF1BB3006DE79B /* LocationMonitor.swift */,
+				46F227C11FEFA1F700DAA174 /* LocationService.swift */,
+				46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -384,11 +390,13 @@
 				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
 				461482331FEEB64A006466EE /* GymsRepository.swift in Sources */,
 				4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */,
+				46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */,
 				4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */,
 				4657C1391FEEE8D9006DE79B /* GymPoiAnnotation.swift in Sources */,
 				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
 				4657C13C1FEF1BB3006DE79B /* LocationMonitor.swift in Sources */,
 				4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */,
+				46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */,
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
