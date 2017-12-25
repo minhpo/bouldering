@@ -20,6 +20,7 @@ protocol ViewGymsOnMapDisplayLogic: class {
 class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     @IBInspectable var poiImage: UIImage!
+    @IBOutlet weak var zoomButton: UIButton!
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             mapView.delegate = self
@@ -110,10 +111,16 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        guard shouldZoomToUserLocation else { return }
+        zoomButton.isEnabled = true
         
-        zoom(to: userLocation.coordinate)
-        shouldZoomToUserLocation = false
+        if shouldZoomToUserLocation {
+            zoom(to: userLocation.coordinate)
+            shouldZoomToUserLocation = false
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
+        zoomButton.isEnabled = false
     }
     
 }

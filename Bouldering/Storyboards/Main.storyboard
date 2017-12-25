@@ -49,6 +49,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="mapView" destination="zfB-jP-QJe" id="ggZ-Lw-xtE"/>
+                        <outlet property="zoomButton" destination="PfW-98-dVo" id="oeo-hk-8aq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
