@@ -79,6 +79,11 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         self.mapView.addAnnotations(annotations)
     }
     
+    @IBAction func zoomToCurrentLocationPressed(sender: UIButton) {
+        let coordinates = mapView.userLocation.coordinate
+        zoom(to: coordinates)
+    }
+    
     private func zoom(to center: CLLocationCoordinate2D) {
         let radius: CLLocationDistance = 10000 // In meters
         let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)

@@ -21,18 +21,31 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-jP-QJe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-98-dVo">
+                                <rect key="frame" x="303" y="579" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3b9-GX-CXD"/>
+                                    <constraint firstAttribute="width" constant="56" id="Jt5-Oe-O0d"/>
+                                </constraints>
+                                <state key="normal" image="Zoom"/>
+                                <connections>
+                                    <action selector="zoomToCurrentLocationPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWs-yI-uAR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PfW-98-dVo" secondAttribute="trailing" constant="16" id="PTG-Il-uUN"/>
                             <constraint firstItem="zfB-jP-QJe" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="esV-7z-b8K"/>
                             <constraint firstItem="zfB-jP-QJe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iNH-K7-kJS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PfW-98-dVo" secondAttribute="bottom" constant="32" id="j2L-Oo-fiD"/>
                             <constraint firstItem="zfB-jP-QJe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ujz-q5-Xh8"/>
                             <constraint firstItem="zfB-jP-QJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wIP-YR-UZ4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="poiImage" value="Image"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="poiImage" value="Pin"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="mapView" destination="zfB-jP-QJe" id="ggZ-Lw-xtE"/>
@@ -43,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="60" height="66"/>
+        <image name="Pin" width="60" height="66"/>
+        <image name="Zoom" width="56" height="56"/>
     </resources>
 </document>
