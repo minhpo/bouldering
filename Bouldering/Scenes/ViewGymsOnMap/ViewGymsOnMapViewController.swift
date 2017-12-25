@@ -98,15 +98,9 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let gymPoiAnnotation = annotation as? GymPoiAnnotation else { return nil }
         
-        let identifier = "marker"
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            ?? MKAnnotationView(annotation: gymPoiAnnotation, reuseIdentifier: identifier)
-        annotationView.image = poiImage
-        annotationView.annotation = gymPoiAnnotation
-        
-        annotationView.bounds.size = CGSize(width: 30, height: 33)
-        annotationView.centerOffset = CGPoint(x: 0, y: -annotationView.bounds.midY)
-        
+        let annotationView = GymPoiView.newInstance()
+        annotationView.configure(annotation: gymPoiAnnotation)
+
         return annotationView
     }
     

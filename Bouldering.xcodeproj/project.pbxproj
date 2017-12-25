@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460024B11FF1380900D7667C /* GymPoiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460024B01FF1380900D7667C /* GymPoiView.xib */; };
+		460024B31FF1384D00D7667C /* GymPoiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460024B21FF1384D00D7667C /* GymPoiView.swift */; };
+		460024B61FF14B8700D7667C /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460024B51FF14B8700D7667C /* UIView+Nib.swift */; };
 		461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461482061FEEADBA006466EE /* LaunchScreen.storyboard */; };
 		461482091FEEADBB006466EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461482071FEEADBB006466EE /* Main.storyboard */; };
 		461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */; };
@@ -27,6 +30,7 @@
 		4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */; };
 		4657C1441FEF2797006DE79B /* ApplicationInitialiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
+		46B0C3391FF16F6700BE3261 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */; };
 		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
 		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
 		46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */; };
@@ -43,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460024B01FF1380900D7667C /* GymPoiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GymPoiView.xib; sourceTree = "<group>"; };
+		460024B21FF1384D00D7667C /* GymPoiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymPoiView.swift; sourceTree = "<group>"; };
+		460024B51FF14B8700D7667C /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		461482061FEEADBA006466EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		461482071FEEADBB006466EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymsOnMapPresenter.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBroadcaster.swift; sourceTree = "<group>"; };
@@ -91,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460024B41FF14B6F00D7667C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				460024B51FF14B8700D7667C /* UIView+Nib.swift */,
+				46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		461482031FEEAD8B006466EE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +130,7 @@
 			children = (
 				4657C13D1FEF2490006DE79B /* Core */,
 				4614821C1FEEB38D006466EE /* DomainModels */,
+				460024B41FF14B6F00D7667C /* Extensions */,
 				461482311FEEB5A2006466EE /* GymsRepository */,
 				461482371FEEBA31006466EE /* InversionOfControl */,
 				4657C13A1FEF1B94006DE79B /* Locations */,
@@ -125,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				4657C1381FEEE8D9006DE79B /* GymPoiAnnotation.swift */,
+				460024B21FF1384D00D7667C /* GymPoiView.swift */,
+				460024B01FF1380900D7667C /* GymPoiView.xib */,
 				4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */,
 				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
 				4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */,
@@ -360,6 +380,7 @@
 			files = (
 				461482091FEEADBB006466EE /* Main.storyboard in Resources */,
 				4614821B1FEEB348006466EE /* gyms.json in Resources */,
+				460024B11FF1380900D7667C /* GymPoiView.xib in Resources */,
 				469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */,
 				461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */,
 				4657C1361FEEDA7B006DE79B /* InfoPlist.strings in Resources */,
@@ -401,6 +422,7 @@
 			files = (
 				4657C13F1FEF24B3006DE79B /* AppDelegate.swift in Sources */,
 				461482391FEEBA53006466EE /* ServiceLocator.swift in Sources */,
+				460024B61FF14B8700D7667C /* UIView+Nib.swift in Sources */,
 				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
 				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
@@ -412,9 +434,11 @@
 				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
 				46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */,
 				4657C13C1FEF1BB3006DE79B /* LocationMonitor.swift in Sources */,
+				46B0C3391FF16F6700BE3261 /* UIView+Layer.swift in Sources */,
 				4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */,
 				46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */,
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
+				460024B31FF1384D00D7667C /* GymPoiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
