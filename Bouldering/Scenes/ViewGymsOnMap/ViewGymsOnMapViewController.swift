@@ -20,6 +20,7 @@ protocol ViewGymsOnMapDisplayLogic: class {
 class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     @IBInspectable var poiImage: UIImage!
+    @IBOutlet weak var zoomButton: UIButton!
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             mapView.delegate = self
@@ -28,6 +29,8 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     
     var interactor: ViewGymsOnMapBusinessLogic?
     var router: (NSObjectProtocol & ViewGymsOnMapRoutingLogic & ViewGymsOnMapDataPassing)?
+    
+    private var shouldZoomToUserLocation = true
     
     // MARK: Object lifecycle
     
@@ -77,6 +80,17 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         self.mapView.addAnnotations(annotations)
     }
     
+    @IBAction func zoomToCurrentLocationPressed(sender: UIButton) {
+        let coordinates = mapView.userLocation.coordinate
+        zoom(to: coordinates)
+    }
+    
+    private func zoom(to center: CLLocationCoordinate2D) {
+        let radius: CLLocationDistance = 10000 // In meters
+        let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+        mapView.setRegion(region, animated: true)
+    }
+    
 }
 
 extension ViewGymsOnMapViewController: MKMapViewDelegate {
@@ -94,6 +108,19 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         annotationView.centerOffset = CGPoint(x: 0, y: -annotationView.bounds.midY)
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        zoomButton.isEnabled = true
+        
+        if shouldZoomToUserLocation {
+            zoom(to: userLocation.coordinate)
+            shouldZoomToUserLocation = false
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
+        zoomButton.isEnabled = false
     }
     
 }
