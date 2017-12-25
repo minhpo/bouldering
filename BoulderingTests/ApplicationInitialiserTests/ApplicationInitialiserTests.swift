@@ -22,39 +22,39 @@ class ApplicationInitialiserTests: XCTestCase {
     }
     
     func testLocationMonitorDidEnable() {
-        let locationMonitor = MockLocationMonitor()
-        let serviceLocator = MockServiceLocator(locationMonitor: locationMonitor)
-        
+        let mock = MockMonitor()
+        let serviceLocator = MockServiceLocator(mock: mock)
         let initialiser = BoulderingInitialiser(serviceLocator: serviceLocator)
+        
         initialiser.start()
         
-        XCTAssert(locationMonitor.didEnable, "Expected location monitor to be enabled")
+        XCTAssert(mock.didEnable, "Expected region monitor to be enabled")
     }
     
     func testLocationMonitorDidStartWhenNotEnabled() {
-        let locationMonitor = MockLocationMonitor()
-        
-        let serviceLocator = MockServiceLocator(locationMonitor: locationMonitor)
-        
+        let mock = MockMonitor()
+        let serviceLocator = MockServiceLocator(mock: mock)
         let initialiser = BoulderingInitialiser(serviceLocator: serviceLocator)
+        
         initialiser.start()
         
-        XCTAssert(locationMonitor.didStart, "Expected location monitor to be started")
+        XCTAssert(mock.didStart, "Expected region monitor to be started")
     }
     
     func testLocationMonitorDidStartWhenEnabled() {
-        let locationMonitor = MockLocationMonitor()
-        locationMonitor.mutableEnabledState = true
-        
-        let serviceLocator = MockServiceLocator(locationMonitor: locationMonitor)
-        
+        let mock = MockMonitor()
+        let serviceLocator = MockServiceLocator(mock: mock)
         let initialiser = BoulderingInitialiser(serviceLocator: serviceLocator)
+        
+        mock.mutableEnabledState = true
         initialiser.start()
         
-        XCTAssert(locationMonitor.didStart, "Expected location monitor to be started")
+        XCTAssert(mock.didStart, "Expected region monitor to be started")
     }
     
-    class MockLocationMonitor: LocationMonitor {
+    class MockMonitor: RegionMonitor {
+        weak var delegate: RegionMonitorDelegate?
+        
         var mutableEnabledState: Bool = false
         var isEnabled: Bool { return mutableEnabledState }
         
@@ -79,14 +79,14 @@ class ApplicationInitialiserTests: XCTestCase {
     
     class MockServiceLocator: ServiceLocator {
         
-        let mockLocationMonitor: LocationMonitor
+        let mock: RegionMonitor
         
-        init(locationMonitor: LocationMonitor) {
-            mockLocationMonitor = locationMonitor
+        init(mock: RegionMonitor) {
+            self.mock = mock
         }
         
-        override var locationMonitor: LocationMonitor {
-            return mockLocationMonitor
+        override var regionMonitor: RegionMonitor {
+            return mock
         }
         
     }

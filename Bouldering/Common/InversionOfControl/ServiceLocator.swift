@@ -22,4 +22,16 @@ class ServiceLocator {
         return locationMonitor
     }()
     
+    lazy private(set) var regionMonitor: RegionMonitor = {
+        let locations = Set(gymsRepository.getAllGyms().map { $0.coordinates })
+        
+        let regionMonitor: RegionMonitor = RegionManager(locations: locations)
+        return regionMonitor
+    }()
+    
+    lazy private(set) var notificationBroadcaster: NotificationBroadcaster = {
+        let broadcaster: NotificationBroadcaster = LocalNotificationBroadcaster()
+        return broadcaster
+    }()
+    
 }

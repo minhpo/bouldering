@@ -9,13 +9,7 @@
 import Foundation
 import CoreLocation
 
-protocol LocationMonitor {
-    var isEnabled: Bool { get }
-    
-    func enable(completion: (() -> Void)?, failure: (() -> Void)?)
-    func start()
-    func stop()
-}
+protocol LocationMonitor: LocationService { }
 
 class LocationManager: NSObject, LocationMonitor {
     
