@@ -21,9 +21,8 @@ class BoulderingInitialiser: ApplicationInitialiser {
     }
     
     func start() {
-        DispatchQueue.global(qos: .utility).async {
-            self.startRegionMonitoring()
-        }
+        self.startRegionMonitoring()
+        self.registerForNotifications()
     }
     
     private func startLocationMonitoring() {
@@ -38,7 +37,10 @@ class BoulderingInitialiser: ApplicationInitialiser {
     }
     
     private func startRegionMonitoring() {
-        let monitor = serviceLocator.regionMonitor
+        var monitor = serviceLocator.regionMonitor
+        
+        // TODO: This is only temporary, should be removed
+        monitor.delegate = self
         if monitor.isEnabled {
             monitor.start()
         } else {
@@ -52,4 +54,34 @@ class BoulderingInitialiser: ApplicationInitialiser {
             })
         }
     }
+    
+    private func registerForNotifications() {
+        let broadcaster = serviceLocator.notificationBroadcaster
+        if !broadcaster.isEnabled {
+            broadcaster.enable(completion: nil, failure: nil)
+        }
+    }
+    
+}
+
+extension BoulderingInitialiser: RegionMonitorDelegate {
+    
+    func enterRegion(coordinates: Coordinates) {
+        let repository = serviceLocator.gymsRepository
+        let broadcaster = serviceLocator.notificationBroadcaster
+        
+        if let gym = repository.getGym(at: coordinates) {
+            broadcaster.broadcast(title: "Have fun", body: "You are close to \(gym.name)", after: 1)
+        }
+    }
+    
+    func exitRegion(coordinates: Coordinates) {
+        let repository = serviceLocator.gymsRepository
+        let broadcaster = serviceLocator.notificationBroadcaster
+        
+        if let gym = repository.getGym(at: coordinates) {
+            broadcaster.broadcast(title: "Goodbye", body: "You left \(gym.name)", after: 1)
+        }
+    }
+    
 }

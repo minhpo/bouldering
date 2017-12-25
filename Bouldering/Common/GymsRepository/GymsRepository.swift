@@ -10,18 +10,26 @@ import Foundation
 
 protocol GymsRepository {
     func getAllGyms() -> [Gym]
+    func getGym(at coordinates: Coordinates) -> Gym?
 }
 
 class GymsFileRepository: GymsRepository {
     
+    private(set) var gyms: [Gym] = []
+    
     func getAllGyms() -> [Gym] {
-        guard let content = getContentFromFile(),
-            let gyms = convertToModels(content: content) else {
-                assert(false, "Failed importing gyms data")
-                return []
+        if let content = getContentFromFile(),
+            let gyms = convertToModels(content: content) {
+            self.gyms = gyms
+        } else {
+            self.gyms = []
         }
         
-        return gyms
+        return self.gyms
+    }
+    
+    func getGym(at coordinates: Coordinates) -> Gym? {
+        return gyms.first(where: { $0.coordinates == coordinates })
     }
     
     private func getContentFromFile() -> String? {

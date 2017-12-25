@@ -14,7 +14,9 @@ protocol RegionMonitorDelegate: class {
     func exitRegion(coordinates: Coordinates)
 }
 
-protocol RegionMonitor: LocationService { }
+protocol RegionMonitor: LocationService {
+    var delegate: RegionMonitorDelegate? { get set }
+}
 
 class RegionManager: NSObject, RegionMonitor {
     
@@ -54,7 +56,9 @@ class RegionManager: NSObject, RegionMonitor {
     func start() {
         guard isEnabled else { return }
         
-        let radius: CLLocationDistance = 75
+        stop()
+        
+        let radius: CLLocationDistance = 100
         locations.forEach { coordinates in
             let center = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
             let region = CLCircularRegion(center: center, radius: radius, identifier: coordinates.description)

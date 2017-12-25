@@ -29,6 +29,7 @@
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
 		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
 		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
+		46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBroadcaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				461482311FEEB5A2006466EE /* GymsRepository */,
 				461482371FEEBA31006466EE /* InversionOfControl */,
 				4657C13A1FEF1B94006DE79B /* Locations */,
+				46F227C31FF0F24F00DAA174 /* Notifications */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -249,6 +252,14 @@
 			path = Bouldering;
 			sourceTree = "<group>";
 		};
+		46F227C31FF0F24F00DAA174 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +318,11 @@
 					469E26B11FEE8C0D00CB303B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -394,6 +410,7 @@
 				4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */,
 				4657C1391FEEE8D9006DE79B /* GymPoiAnnotation.swift in Sources */,
 				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
+				46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */,
 				4657C13C1FEF1BB3006DE79B /* LocationMonitor.swift in Sources */,
 				4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */,
 				46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */,

@@ -29,4 +29,9 @@ class ServiceLocator {
         return regionMonitor
     }()
     
+    lazy private(set) var notificationBroadcaster: NotificationBroadcaster = {
+        let broadcaster: NotificationBroadcaster = LocalNotificationBroadcaster()
+        return broadcaster
+    }()
+    
 }
