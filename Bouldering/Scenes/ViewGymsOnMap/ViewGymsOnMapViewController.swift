@@ -29,6 +29,8 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     var interactor: ViewGymsOnMapBusinessLogic?
     var router: (NSObjectProtocol & ViewGymsOnMapRoutingLogic & ViewGymsOnMapDataPassing)?
     
+    private var shouldZoomToUserLocation = true
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -77,6 +79,12 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         self.mapView.addAnnotations(annotations)
     }
     
+    private func zoom(to center: CLLocationCoordinate2D) {
+        let radius: CLLocationDistance = 10000 // In meters
+        let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+        mapView.setRegion(region, animated: true)
+    }
+    
 }
 
 extension ViewGymsOnMapViewController: MKMapViewDelegate {
@@ -94,6 +102,13 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         annotationView.centerOffset = CGPoint(x: 0, y: -annotationView.bounds.midY)
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        guard shouldZoomToUserLocation else { return }
+        
+        zoom(to: userLocation.coordinate)
+        shouldZoomToUserLocation = false
     }
     
 }
