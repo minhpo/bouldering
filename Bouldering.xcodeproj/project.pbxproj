@@ -39,6 +39,9 @@
 		46B0C34B1FF2546100BE3261 /* ViewGymDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */; };
 		46B0C34D1FF2546100BE3261 /* ViewGymDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */; };
 		46B0C34E1FF2546100BE3261 /* ViewGymDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */; };
+		46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */; };
+		46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */; };
+		46B0C3551FF2E5EA00BE3261 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B0C3531FF2E5EA00BE3261 /* Localizable.strings */; };
 		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
 		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
 		46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */; };
@@ -92,6 +95,10 @@
 		46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsRouter.swift; sourceTree = "<group>"; };
 		46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsViewController.swift; sourceTree = "<group>"; };
 		46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsInteractor.swift; sourceTree = "<group>"; };
+		46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsOverlayView.swift; sourceTree = "<group>"; };
+		46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsViewModel.swift; sourceTree = "<group>"; };
+		46B0C3541FF2E5EA00BE3261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Bouldering/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		46B0C3561FF2E5F500BE3261 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = ../../nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBroadcaster.swift; sourceTree = "<group>"; };
@@ -184,6 +191,7 @@
 			children = (
 				4614821A1FEEB348006466EE /* gyms.json */,
 				4657C1341FEEDA7B006DE79B /* InfoPlist.strings */,
+				46B0C3531FF2E5EA00BE3261 /* Localizable.strings */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -296,10 +304,12 @@
 		46B0C3421FF2544400BE3261 /* ViewGymDetails */ = {
 			isa = PBXGroup;
 			children = (
+				46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */,
+				46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */,
+				46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */,
 				46B0C3431FF2546100BE3261 /* ViewGymDetailsPresenter.swift */,
 				46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */,
 				46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */,
-				46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */,
 			);
 			path = ViewGymDetails;
 			sourceTree = "<group>";
@@ -413,6 +423,7 @@
 				461482091FEEADBB006466EE /* Main.storyboard in Resources */,
 				4614821B1FEEB348006466EE /* gyms.json in Resources */,
 				460024B11FF1380900D7667C /* GymPoiView.xib in Resources */,
+				46B0C3551FF2E5EA00BE3261 /* Localizable.strings in Resources */,
 				469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */,
 				461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */,
 				4657C1361FEEDA7B006DE79B /* InfoPlist.strings in Resources */,
@@ -458,6 +469,7 @@
 				461482391FEEBA53006466EE /* ServiceLocator.swift in Sources */,
 				460024B61FF14B8700D7667C /* UIView+Nib.swift in Sources */,
 				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
+				46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */,
 				46B0C34B1FF2546100BE3261 /* ViewGymDetailsRouter.swift in Sources */,
 				46B0C33F1FF251F400BE3261 /* OpeningHours.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
@@ -478,6 +490,7 @@
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
 				460024B31FF1384D00D7667C /* GymPoiView.swift in Sources */,
 				46B0C3491FF2546100BE3261 /* ViewGymDetailsPresenter.swift in Sources */,
+				46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */,
 				46B0C33D1FF251E700BE3261 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +513,15 @@
 				4657C1371FEEDA94006DE79B /* nl */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B0C3531FF2E5EA00BE3261 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B0C3541FF2E5EA00BE3261 /* Base */,
+				46B0C3561FF2E5F500BE3261 /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -12,14 +12,29 @@
 
 import UIKit
 
-protocol ViewGymDetailsBusinessLogic { }
+protocol ViewGymDetailsBusinessLogic {
+    func set(gym: Gym)
+    func start()
+}
 
-protocol ViewGymDetailsDataStore { }
+protocol ViewGymDetailsDataStore {
+    var gym: Gym? { get }
+}
 
 class ViewGymDetailsInteractor: ViewGymDetailsBusinessLogic, ViewGymDetailsDataStore {
     
     var presenter: ViewGymDetailsPresentationLogic?
+    private(set) var gym: Gym?
     
     // MARK: Do something
     
+    func set(gym: Gym) {
+        self.gym = gym
+    }
+    
+    func start() {
+        guard let gym = self.gym else { return }
+        
+        presenter?.display(gym: gym)
+    }
 }

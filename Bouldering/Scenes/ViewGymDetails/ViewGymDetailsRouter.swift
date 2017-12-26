@@ -12,7 +12,9 @@
 
 import UIKit
 
-@objc protocol ViewGymDetailsRoutingLogic { }
+@objc protocol ViewGymDetailsRoutingLogic {
+    func navigateToMap()
+}
 
 protocol ViewGymDetailsDataPassing {
     var dataStore: ViewGymDetailsDataStore? { get }
@@ -26,6 +28,10 @@ class ViewGymDetailsRouter: NSObject, ViewGymDetailsRoutingLogic, ViewGymDetails
     // MARK: Routing
     
     // MARK: Navigation
+    
+    func navigateToMap() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: Passing data
     

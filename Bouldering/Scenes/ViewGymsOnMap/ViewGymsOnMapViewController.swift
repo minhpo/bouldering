@@ -67,6 +67,12 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         interactor?.start()
     }
     
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router?.prepare(for: segue, sender: sender)
+    }
+    
     // MARK: Do something
     
     func display(viewModels: [GymPoiViewModel]) {
@@ -102,6 +108,16 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         annotationView.configure(annotation: gymPoiAnnotation)
 
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation else { return }
+        
+        mapView.deselectAnnotation(annotation, animated: false)
+        
+        let coordinates = Coordinates(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+        interactor?.selectedGym(at: coordinates)
+        router?.navigateToDetails()
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

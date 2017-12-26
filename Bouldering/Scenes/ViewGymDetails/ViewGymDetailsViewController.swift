@@ -12,9 +12,13 @@
 
 import UIKit
 
-protocol ViewGymDetailsDisplayLogic: class { }
+protocol ViewGymDetailsDisplayLogic: class {
+    func display(viewModel: GymDetailsViewModel)
+}
 
 class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic {
+    
+    @IBOutlet weak var gymDetailsOverlayView: GymDetailsOverlayView!
     
     var interactor: ViewGymDetailsBusinessLogic?
     var router: (NSObjectProtocol & ViewGymDetailsRoutingLogic & ViewGymDetailsDataPassing)?
@@ -52,8 +56,17 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interactor?.start()
     }
     
     // MARK: Do something
     
+    func display(viewModel: GymDetailsViewModel) {
+        gymDetailsOverlayView.configure(viewModel: viewModel)
+    }
+    
+    @IBAction func closeButtonPressed(sender: UIButton) {
+        router?.navigateToMap()
+    }
 }

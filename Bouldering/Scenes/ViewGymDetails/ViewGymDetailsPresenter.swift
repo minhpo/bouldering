@@ -12,7 +12,9 @@
 
 import UIKit
 
-protocol ViewGymDetailsPresentationLogic { }
+protocol ViewGymDetailsPresentationLogic {
+    func display(gym: Gym)
+}
 
 class ViewGymDetailsPresenter: ViewGymDetailsPresentationLogic {
     
@@ -20,4 +22,10 @@ class ViewGymDetailsPresenter: ViewGymDetailsPresentationLogic {
     
     // MARK: Do something
     
+    func display(gym: Gym) {
+        DispatchQueue.main.async {
+            let viewModel = GymDetailsViewModel(gym: gym)
+            self.viewController?.display(viewModel: viewModel)
+        }
+    }
 }

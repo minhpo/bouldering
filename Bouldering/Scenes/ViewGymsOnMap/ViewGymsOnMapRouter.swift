@@ -13,6 +13,9 @@
 import UIKit
 
 protocol ViewGymsOnMapRoutingLogic {
+    func navigateToDetails()
+    
+    func prepare(for segue: UIStoryboardSegue, sender: Any?)
 }
 
 protocol ViewGymsOnMapDataPassing {
@@ -28,6 +31,22 @@ class ViewGymsOnMapRouter: NSObject, ViewGymsOnMapRoutingLogic, ViewGymsOnMapDat
     
     // MARK: Navigation
     
+    func navigateToDetails() {
+        viewController?.performSegue(withIdentifier: "details", sender: viewController)
+    }
+    
     // MARK: Passing data
+    
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewGymDetailsViewController = segue.destination as? ViewGymDetailsViewController {
+            if let selectedGym = dataStore?.selectedGym {
+                viewGymDetailsViewController.interactor?.set(gym: selectedGym)
+            }
+            
+            if let snapshot = viewController?.view.snapshotView(afterScreenUpdates: false) {
+                viewGymDetailsViewController.view.insertSubview(snapshot, at: 0)
+            }
+        }
+    }
     
 }

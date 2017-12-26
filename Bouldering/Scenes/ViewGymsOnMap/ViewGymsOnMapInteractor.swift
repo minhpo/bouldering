@@ -14,14 +14,19 @@ import UIKit
 
 protocol ViewGymsOnMapBusinessLogic {
     func start()
+    func selectedGym(at coordinates: Coordinates)
 }
 
 protocol ViewGymsOnMapDataStore {
+    var selectedGym: Gym? { get }
 }
 
 class ViewGymsOnMapInteractor: ViewGymsOnMapBusinessLogic, ViewGymsOnMapDataStore {
     
     var presenter: ViewGymsOnMapPresentationLogic?
+    
+    private(set) var selectedGym: Gym?
+    private var gyms: [Gym] = []
     
     let gymsRepository: GymsRepository
     
@@ -33,8 +38,12 @@ class ViewGymsOnMapInteractor: ViewGymsOnMapBusinessLogic, ViewGymsOnMapDataStor
     
     func start() {
         DispatchQueue.global(qos: .userInitiated).async {
-            let gyms = self.gymsRepository.getAllGyms()
-            self.presenter?.display(gyms: gyms)
+            self.gyms = self.gymsRepository.getAllGyms()
+            self.presenter?.display(gyms: self.gyms)
         }
+    }
+    
+    func selectedGym(at coordinates: Coordinates) {
+        selectedGym = gyms.first(where: { $0.coordinates == coordinates })
     }
 }
