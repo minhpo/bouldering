@@ -1,34 +1,29 @@
 public struct Gym: CustomStringConvertible, Codable {
     
     let name: String
-    let address: String
-    let housenumber: Int
-    let postfix: String?
-    let postalCode: String
-    let city: String
+    let address: Address
+    let contacts: Contacts
+    let openingHours: OpeningHoursCollection
     var coordinates: Coordinates?
     
     public init?(components: [String]) {
-        guard components.count == 6,
-            let number = Int(components[2]) else {
+        guard components.count >= 22,
+            let address = Address(components: Array(components[1...5])),
+            let contacts = Contacts(components: Array(components[6...7])),
+            let openingHours = OpeningHoursCollection(components: Array(components[8...21])) else {
                 return nil
         }
         
         name = components[0]
-        address = components[1]
-        housenumber = number
-        postfix = !components[3].isEmpty ? components[3] : nil
-        postalCode = components[4]
-        city = components[5]
+        self.address = address
+        self.contacts = contacts
+        self.openingHours = openingHours
         
         coordinates = nil
     }
     
     public var description: String {
-        let properties: [CustomStringConvertible?] = [name, address, housenumber, postfix, postalCode, city]
-        var formattedString = properties.flatMap { $0 }
-            .map { String(describing: $0) }
-            .joined(separator: ", ")
+        var formattedString = "\(name), \(address)"
         
         if let coordinates = coordinates {
             formattedString = "\(formattedString) - (\(coordinates.latitude), \(coordinates.longitude))"
