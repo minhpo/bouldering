@@ -32,7 +32,7 @@ class ViewGymsOnMapRouter: NSObject, ViewGymsOnMapRoutingLogic, ViewGymsOnMapDat
     // MARK: Navigation
     
     func navigateToDetails() {
-        viewController?.performSegue(withIdentifier: "details", sender: viewController)
+        viewController?.navigate(to: .gymDetails)
     }
     
     // MARK: Passing data
@@ -46,7 +46,25 @@ class ViewGymsOnMapRouter: NSObject, ViewGymsOnMapRoutingLogic, ViewGymsOnMapDat
             if let snapshot = viewController?.view.snapshotView(afterScreenUpdates: false) {
                 viewGymDetailsViewController.view.insertSubview(snapshot, at: 0)
             }
+            
+            viewGymDetailsViewController.transitioningDelegate = self
         }
+    }
+    
+}
+
+extension ViewGymsOnMapRouter: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard presenting == viewController, presented is ViewGymDetailsViewController else { return nil }
+        
+        return ShowGymDetailsOverlayAnimator()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard dismissed is ViewGymDetailsViewController else { return nil }
+        
+        return nil
     }
     
 }

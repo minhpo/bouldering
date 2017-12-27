@@ -18,7 +18,8 @@ protocol ViewGymDetailsDisplayLogic: class {
 
 class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic {
     
-    @IBOutlet weak var gymDetailsOverlayView: GymDetailsOverlayView!
+    @IBOutlet weak var transparentOverlayView: UIView!
+    @IBOutlet weak var detailsOverlayView: GymDetailsOverlayView!
     
     var interactor: ViewGymDetailsBusinessLogic?
     var router: (NSObjectProtocol & ViewGymDetailsRoutingLogic & ViewGymDetailsDataPassing)?
@@ -63,7 +64,7 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
     // MARK: Do something
     
     func display(viewModel: GymDetailsViewModel) {
-        gymDetailsOverlayView.configure(viewModel: viewModel)
+        detailsOverlayView.configure(viewModel: viewModel)
     }
     
     @IBAction func closeButtonPressed(sender: UIButton) {

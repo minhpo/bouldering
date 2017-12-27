@@ -118,6 +118,20 @@ class GymDetailsOverlayView: UIView {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupRoundedCorners()
+    }
+    
+    private func setupRoundedCorners() {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10))
+        let mask = CAShapeLayer()
+        mask.frame = self.bounds
+        mask.path = path.cgPath
+        
+        self.layer.mask = mask
+    }
+    
     func configure(viewModel: GymDetailsViewModel) {
         nameLabel.text = viewModel.name
         topAddressLabel.text = viewModel.topAddress

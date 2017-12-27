@@ -42,6 +42,9 @@
 		46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */; };
 		46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */; };
 		46B0C3551FF2E5EA00BE3261 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B0C3531FF2E5EA00BE3261 /* Localizable.strings */; };
+		46B0C3591FF3925600BE3261 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3581FF3925600BE3261 /* Navigation.swift */; };
+		46B0C35B1FF3928500BE3261 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */; };
+		46B0C35D1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C35C1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift */; };
 		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
 		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
 		46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */; };
@@ -99,6 +102,9 @@
 		46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsViewModel.swift; sourceTree = "<group>"; };
 		46B0C3541FF2E5EA00BE3261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Bouldering/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		46B0C3561FF2E5F500BE3261 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = ../../nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46B0C3581FF3925600BE3261 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		46B0C35C1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGymDetailsOverlayAnimator.swift; sourceTree = "<group>"; };
 		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBroadcaster.swift; sourceTree = "<group>"; };
@@ -122,13 +128,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		460024B41FF14B6F00D7667C /* Extensions */ = {
+		460024B41FF14B6F00D7667C /* UIViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				460024B51FF14B8700D7667C /* UIView+Nib.swift */,
 				46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */,
 			);
-			path = Extensions;
+			path = UIViewExtensions;
 			sourceTree = "<group>";
 		};
 		461482031FEEAD8B006466EE /* Scenes */ = {
@@ -154,11 +160,12 @@
 			children = (
 				4657C13D1FEF2490006DE79B /* Core */,
 				4614821C1FEEB38D006466EE /* DomainModels */,
-				460024B41FF14B6F00D7667C /* Extensions */,
 				461482311FEEB5A2006466EE /* GymsRepository */,
 				461482371FEEBA31006466EE /* InversionOfControl */,
 				4657C13A1FEF1B94006DE79B /* Locations */,
+				46B0C3571FF3920E00BE3261 /* Navigation */,
 				46F227C31FF0F24F00DAA174 /* Notifications */,
+				460024B41FF14B6F00D7667C /* UIViewExtensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 				460024B21FF1384D00D7667C /* GymPoiView.swift */,
 				460024B01FF1380900D7667C /* GymPoiView.xib */,
 				4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */,
+				46B0C35C1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift */,
 				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
 				4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */,
 				4614820D1FEEAE0B006466EE /* ViewGymsOnMapRouter.swift */,
@@ -312,6 +320,15 @@
 				46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */,
 			);
 			path = ViewGymDetails;
+			sourceTree = "<group>";
+		};
+		46B0C3571FF3920E00BE3261 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				46B0C3581FF3925600BE3261 /* Navigation.swift */,
+				46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		46F227C31FF0F24F00DAA174 /* Notifications */ = {
@@ -470,6 +487,7 @@
 				460024B61FF14B8700D7667C /* UIView+Nib.swift in Sources */,
 				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
 				46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */,
+				46B0C35D1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift in Sources */,
 				46B0C34B1FF2546100BE3261 /* ViewGymDetailsRouter.swift in Sources */,
 				46B0C33F1FF251F400BE3261 /* OpeningHours.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
@@ -479,6 +497,7 @@
 				46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */,
 				4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */,
 				4657C1391FEEE8D9006DE79B /* GymPoiAnnotation.swift in Sources */,
+				46B0C35B1FF3928500BE3261 /* UIViewController+Navigation.swift in Sources */,
 				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
 				46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */,
 				4657C13C1FEF1BB3006DE79B /* LocationMonitor.swift in Sources */,
@@ -490,6 +509,7 @@
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
 				460024B31FF1384D00D7667C /* GymPoiView.swift in Sources */,
 				46B0C3491FF2546100BE3261 /* ViewGymDetailsPresenter.swift in Sources */,
+				46B0C3591FF3925600BE3261 /* Navigation.swift in Sources */,
 				46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */,
 				46B0C33D1FF251E700BE3261 /* Contacts.swift in Sources */,
 			);

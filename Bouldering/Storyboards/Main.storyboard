@@ -67,7 +67,7 @@
                     <connections>
                         <outlet property="mapView" destination="zfB-jP-QJe" id="ggZ-Lw-xtE"/>
                         <outlet property="zoomButton" destination="PfW-98-dVo" id="oeo-hk-8aq"/>
-                        <segue destination="2CV-AG-1Gi" kind="show" identifier="details" id="sC1-yb-3tX"/>
+                        <segue destination="2CV-AG-1Gi" kind="show" identifier="gymDetails" id="sC1-yb-3tX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,9 +81,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-xY-KG7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-xY-KG7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-Cp-Zjf" customClass="GymDetailsOverlayView" customModule="Bouldering" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
@@ -338,7 +338,7 @@
                             <constraint firstItem="mnr-xY-KG7" firstAttribute="top" secondItem="FsM-I6-NHo" secondAttribute="top" id="7kQ-di-hgA"/>
                             <constraint firstItem="mnr-xY-KG7" firstAttribute="leading" secondItem="Zqi-Ir-Hsq" secondAttribute="leading" id="CKC-Ah-bRi"/>
                             <constraint firstItem="IFx-Cp-Zjf" firstAttribute="leading" secondItem="Zqi-Ir-Hsq" secondAttribute="leading" id="DRO-k0-ldd"/>
-                            <constraint firstItem="IFx-Cp-Zjf" firstAttribute="bottom" secondItem="Zqi-Ir-Hsq" secondAttribute="bottom" id="Egd-y6-VAq"/>
+                            <constraint firstItem="IFx-Cp-Zjf" firstAttribute="bottom" secondItem="FsM-I6-NHo" secondAttribute="bottom" id="Egd-y6-VAq"/>
                             <constraint firstItem="IFx-Cp-Zjf" firstAttribute="top" secondItem="Zqi-Ir-Hsq" secondAttribute="top" id="KF9-dA-WbW"/>
                             <constraint firstItem="mnr-xY-KG7" firstAttribute="trailing" secondItem="Zqi-Ir-Hsq" secondAttribute="trailing" id="PGl-dO-UNj"/>
                             <constraint firstItem="mnr-xY-KG7" firstAttribute="bottom" secondItem="Zqi-Ir-Hsq" secondAttribute="bottom" id="Q3f-An-77w"/>
@@ -347,12 +347,13 @@
                         <viewLayoutGuide key="safeArea" id="Zqi-Ir-Hsq"/>
                     </view>
                     <connections>
-                        <outlet property="gymDetailsOverlayView" destination="IFx-Cp-Zjf" id="QY2-FN-Cyz"/>
+                        <outlet property="detailsOverlayView" destination="IFx-Cp-Zjf" id="QY2-FN-Cyz"/>
+                        <outlet property="transparentOverlayView" destination="mnr-xY-KG7" id="sKp-LM-i9y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVY-nY-YHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="59"/>
+            <point key="canvasLocation" x="1121" y="34"/>
         </scene>
     </scenes>
     <resources>
