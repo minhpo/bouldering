@@ -114,6 +114,7 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         guard let annotation = view.annotation else { return }
         
         mapView.deselectAnnotation(annotation, animated: false)
+        zoom(to: annotation.coordinate)
         
         let coordinates = Coordinates(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
         interactor?.selectedGym(at: coordinates)

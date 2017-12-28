@@ -43,10 +43,6 @@ class ViewGymsOnMapRouter: NSObject, ViewGymsOnMapRoutingLogic, ViewGymsOnMapDat
                 viewGymDetailsViewController.interactor?.set(gym: selectedGym)
             }
             
-            if let snapshot = viewController?.view.snapshotView(afterScreenUpdates: false) {
-                viewGymDetailsViewController.view.insertSubview(snapshot, at: 0)
-            }
-            
             viewGymDetailsViewController.transitioningDelegate = self
         }
     }

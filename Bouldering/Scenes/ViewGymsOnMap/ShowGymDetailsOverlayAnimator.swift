@@ -10,7 +10,7 @@ import UIKit
 
 class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    fileprivate let duration: TimeInterval = 0.3
+    fileprivate let duration: TimeInterval = 1
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return self.duration
@@ -19,7 +19,7 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
+        guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? ViewGymsOnMapViewController,
             let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewGymDetailsViewController else {
                 return
         }
@@ -33,11 +33,17 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         presentedViewController.transparentOverlayView.alpha = 0
         
-        UIView.animate(withDuration: self.duration, animations: {
-            presentedViewController.transparentOverlayView.alpha = 1
+        UIView.animate(withDuration: 0.3, animations: {
             presentedViewController.animatableViews.forEach { $0.transform = CGAffineTransform.identity }
-        }, completion: { finished in
-            transitionContext.completeTransition(finished)
+            presentedViewController.transparentOverlayView.alpha = 1
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: true) {
+                presentedViewController.view.insertSubview(snapshot, at: 0)
+            }
+            
+            transitionContext.completeTransition(true)
         })
     }
     
