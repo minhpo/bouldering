@@ -64,7 +64,7 @@ extension ViewGymsOnMapRouter: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard dismissed is ViewGymDetailsViewController else { return nil }
         
-        return nil
+        return HideGymDetailsOverlayAnimator()
     }
     
 }

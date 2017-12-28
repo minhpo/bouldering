@@ -29,6 +29,7 @@
 		4657C13F1FEF24B3006DE79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C13E1FEF24B3006DE79B /* AppDelegate.swift */; };
 		4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */; };
 		4657C1441FEF2797006DE79B /* ApplicationInitialiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */; };
+		467F0E631FF4458F00CB5B0E /* HideGymDetailsOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F0E621FF4458F00CB5B0E /* HideGymDetailsOverlayAnimator.swift */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
 		46B0C3391FF16F6700BE3261 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */; };
 		46B0C33B1FF251D700BE3261 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C33A1FF251D700BE3261 /* Address.swift */; };
@@ -86,6 +87,7 @@
 		4657C13E1FEF24B3006DE79B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInitialiser.swift; sourceTree = "<group>"; };
 		4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInitialiserTests.swift; sourceTree = "<group>"; };
+		467F0E621FF4458F00CB5B0E /* HideGymDetailsOverlayAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideGymDetailsOverlayAnimator.swift; sourceTree = "<group>"; };
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				460024B21FF1384D00D7667C /* GymPoiView.swift */,
 				460024B01FF1380900D7667C /* GymPoiView.xib */,
 				4614823A1FEEBF5D006466EE /* GymPoiViewModel.swift */,
+				467F0E621FF4458F00CB5B0E /* HideGymDetailsOverlayAnimator.swift */,
 				46B0C35C1FF394F300BE3261 /* ShowGymDetailsOverlayAnimator.swift */,
 				461482101FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift */,
 				4614820B1FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift */,
@@ -492,6 +495,7 @@
 				46B0C33F1FF251F400BE3261 /* OpeningHours.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
 				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
+				467F0E631FF4458F00CB5B0E /* HideGymDetailsOverlayAnimator.swift in Sources */,
 				461482331FEEB64A006466EE /* GymsRepository.swift in Sources */,
 				4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */,
 				46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */,

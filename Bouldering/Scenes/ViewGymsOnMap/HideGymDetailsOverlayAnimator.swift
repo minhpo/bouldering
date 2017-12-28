@@ -1,5 +1,5 @@
 //
-//  ShowGymDetailsOverlayAnimator.swift
+//  HideGymDetailsOverlayAnimator.swift
 //  Bouldering
 //
 //  Created by Po Sam on 27/12/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     fileprivate let duration: TimeInterval = 0.3
     
@@ -19,22 +19,19 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
-            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewGymDetailsViewController else {
+        guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? ViewGymDetailsViewController,
+            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
                 return
         }
         
-        containerView.addSubview(presentingViewController.view)
         containerView.addSubview(presentedViewController.view)
+        containerView.addSubview(presentingViewController.view)
         
         let transform = CGAffineTransform(translationX: 0, y: containerView.bounds.maxY)
         
-        presentedViewController.transparentOverlayView.alpha = 0
-        presentedViewController.detailsOverlayView.transform = transform
-        
         UIView.animate(withDuration: self.duration, animations: {
-            presentedViewController.transparentOverlayView.alpha = 1
-            presentedViewController.detailsOverlayView.transform = CGAffineTransform.identity
+            presentingViewController.transparentOverlayView.alpha = 0
+            presentingViewController.detailsOverlayView.transform = transform
         }, completion: { finished in
             transitionContext.completeTransition(finished)
         })
