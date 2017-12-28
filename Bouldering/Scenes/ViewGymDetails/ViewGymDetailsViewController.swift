@@ -64,7 +64,9 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
     // MARK: Do something
     
     func display(viewModel: GymDetailsViewModel) {
-        detailsOverlayView.configure(viewModel: viewModel)
+        guard let contentViewController = childViewControllers.first(where: { $0 is GymDetailsContentTableViewController }) as? GymDetailsContentTableViewController else { return }
+        
+        contentViewController.configure(viewModel: viewModel)
     }
     
     @IBAction func closeButtonPressed(sender: UIButton) {
