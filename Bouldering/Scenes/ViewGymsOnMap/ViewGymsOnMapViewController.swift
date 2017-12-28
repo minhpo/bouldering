@@ -91,8 +91,13 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         zoom(to: coordinates)
     }
     
-    private func zoom(to center: CLLocationCoordinate2D) {
-        let radius: CLLocationDistance = 10000 // In meters
+    
+    /// Scroll map to a location
+    ///
+    /// - Parameters:
+    ///   - center: coordinates of location
+    ///   - radius: radius of map in meters
+    private func zoom(to center: CLLocationCoordinate2D, radius: CLLocationDistance = 10000) {
         let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
         mapView.setRegion(region, animated: true)
     }
@@ -114,7 +119,7 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         guard let annotation = view.annotation else { return }
         
         mapView.deselectAnnotation(annotation, animated: false)
-        zoom(to: annotation.coordinate)
+        zoom(to: annotation.coordinate, radius: 2500)
         
         let coordinates = Coordinates(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
         interactor?.selectedGym(at: coordinates)
