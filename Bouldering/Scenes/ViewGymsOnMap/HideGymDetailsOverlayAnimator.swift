@@ -20,7 +20,7 @@ class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         let containerView = transitionContext.containerView
         
         guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? ViewGymDetailsViewController,
-            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
+            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewGymsOnMapViewController else {
                 return
         }
         
@@ -30,7 +30,7 @@ class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         let displacement = containerView.bounds.height - presentingViewController.detailsOverlayView.frame.minY
         let transform = CGAffineTransform(translationX: 0, y: displacement)
         
-        UIView.animate(withDuration: self.duration, animations: {
+        UIView.animate(withDuration: duration, animations: {
             presentingViewController.transparentOverlayView.alpha = 0
             presentingViewController.animatableViews.forEach { $0.transform = transform }
         }, completion: { finished in

@@ -137,6 +137,23 @@
                                     <constraint firstItem="AkD-Nq-6Ov" firstAttribute="top" secondItem="r0I-NM-fTH" secondAttribute="bottom" constant="6" id="wGg-Hl-mhE"/>
                                     <constraint firstItem="r0I-NM-fTH" firstAttribute="top" secondItem="IFx-Cp-Zjf" secondAttribute="top" constant="6" id="wdO-6i-YgM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHorizontalOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowVerticicalOffset">
+                                        <real key="value" value="-2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.93999999999999995"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="hoursHeaderLabel" destination="rxL-Gj-vbZ" id="uiQ-sI-4se"/>
                                 </connections>

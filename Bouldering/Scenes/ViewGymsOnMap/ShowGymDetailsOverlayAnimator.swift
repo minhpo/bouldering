@@ -39,7 +39,7 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         })
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: true) {
+            if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: false) {
                 presentedViewController.view.insertSubview(snapshot, at: 0)
             }
             
