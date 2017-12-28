@@ -19,13 +19,25 @@ class GymGeneralDetailsTableViewCell: UITableViewCell {
         didSet {
             topAddressLabel.text = ""
         }
-        
     }
     @IBOutlet weak var bottomAddressLabel: UILabel! {
         didSet {
             bottomAddressLabel.text = ""
         }
-        
+    }
+    
+    weak var delegate: GymContactsDelegate?
+    
+    @IBAction func callButtonPressed(sender: UIButton) {
+        delegate?.call()
+    }
+    
+    @IBAction func mailButtonPressed(sender: UIButton) {
+        delegate?.mail()
+    }
+    
+    @IBAction func visitWebsiteButtonPressed(sender: UIButton) {
+        delegate?.visitWebsite()
     }
     
     func configure(viewModel: GymDetailsViewModel) {

@@ -29,6 +29,8 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
     var interactor: ViewGymDetailsBusinessLogic?
     var router: (NSObjectProtocol & ViewGymDetailsRoutingLogic & ViewGymDetailsDataPassing)?
     
+    private var contentViewController: GymDetailsContentTableViewController?
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -63,18 +65,40 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setContentViewController()
         interactor?.start()
+    }
+    
+    private func setContentViewController() {
+        guard let contentViewController = childViewControllers.first(where: { $0 is GymDetailsContentTableViewController }) as? GymDetailsContentTableViewController else { return }
+        
+        self.contentViewController = contentViewController
+        self.contentViewController?.delegate = self
     }
     
     // MARK: Do something
     
     func display(viewModel: GymDetailsViewModel) {
-        guard let contentViewController = childViewControllers.first(where: { $0 is GymDetailsContentTableViewController }) as? GymDetailsContentTableViewController else { return }
-        
-        contentViewController.configure(viewModel: viewModel)
+        contentViewController?.configure(viewModel: viewModel)
     }
     
     @IBAction func closeButtonPressed(sender: UIButton) {
         router?.navigateToMap()
     }
+}
+
+extension ViewGymDetailsViewController: GymContactsDelegate {
+    
+    func call() {
+        interactor?.call()
+    }
+    
+    func mail() {
+        interactor?.mail()
+    }
+    
+    func visitWebsite() {
+        interactor?.visitWebsite()
+    }
+    
 }

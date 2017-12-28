@@ -15,6 +15,10 @@ import UIKit
 protocol ViewGymDetailsBusinessLogic {
     func set(gym: Gym)
     func start()
+    
+    func call()
+    func mail()
+    func visitWebsite()
 }
 
 protocol ViewGymDetailsDataStore {
@@ -36,5 +40,25 @@ class ViewGymDetailsInteractor: ViewGymDetailsBusinessLogic, ViewGymDetailsDataS
         guard let gym = self.gym else { return }
         
         presenter?.display(gym: gym)
+    }
+    
+    func call() {
+        guard let phone = gym?.contacts.phone,
+            let url = URL(string: "tel://\(phone)"),
+            UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url)
+    }
+    
+    func mail() {
+        guard let email = gym?.contacts.email,
+            let url = URL(string: "mailto://\(email)"),
+            UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url)
+    }
+    
+    func visitWebsite() {
+        print(#function)
     }
 }

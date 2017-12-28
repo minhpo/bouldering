@@ -249,6 +249,9 @@
                                                                     <real key="value" value="9"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="callButtonPressedWithSender:" destination="qhs-PN-vSf" eventType="touchUpInside" id="daO-bh-DQa"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPU-d9-bl5">
                                                             <rect key="frame" x="117" y="0.0" width="109" height="52"/>
@@ -264,6 +267,9 @@
                                                                     <real key="value" value="9"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="mailButtonPressedWithSender:" destination="qhs-PN-vSf" eventType="touchUpInside" id="F6M-Lv-jIP"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdq-ZR-tAM">
                                                             <rect key="frame" x="234" y="0.0" width="109" height="52"/>
@@ -279,6 +285,9 @@
                                                                     <real key="value" value="9"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="visitWebsiteButtonPressedWithSender:" destination="qhs-PN-vSf" eventType="touchUpInside" id="ikT-rI-bh0"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
