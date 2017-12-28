@@ -23,9 +23,7 @@ class ViewGymDetailsPresenter: ViewGymDetailsPresentationLogic {
     // MARK: Do something
     
     func display(gym: Gym) {
-        DispatchQueue.main.async {
-            let viewModel = GymDetailsViewModel(gym: gym)
-            self.viewController?.display(viewModel: viewModel)
-        }
+        let viewModel = GymDetailsViewModel(gym: gym)
+        self.viewController?.display(viewModel: viewModel)
     }
 }

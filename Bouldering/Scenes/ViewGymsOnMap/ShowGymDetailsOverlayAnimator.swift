@@ -27,14 +27,15 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         containerView.addSubview(presentingViewController.view)
         containerView.addSubview(presentedViewController.view)
         
-        let transform = CGAffineTransform(translationX: 0, y: containerView.bounds.maxY)
+        let displacement = containerView.bounds.height - presentedViewController.detailsOverlayView.frame.minY
+        let transform = CGAffineTransform(translationX: 0, y: displacement)
+        presentedViewController.animatableViews.forEach { $0.transform = transform }
         
         presentedViewController.transparentOverlayView.alpha = 0
-        presentedViewController.detailsOverlayView.transform = transform
         
         UIView.animate(withDuration: self.duration, animations: {
             presentedViewController.transparentOverlayView.alpha = 1
-            presentedViewController.detailsOverlayView.transform = CGAffineTransform.identity
+            presentedViewController.animatableViews.forEach { $0.transform = CGAffineTransform.identity }
         }, completion: { finished in
             transitionContext.completeTransition(finished)
         })

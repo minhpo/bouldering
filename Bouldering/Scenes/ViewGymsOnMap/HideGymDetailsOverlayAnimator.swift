@@ -27,11 +27,12 @@ class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         containerView.addSubview(presentedViewController.view)
         containerView.addSubview(presentingViewController.view)
         
-        let transform = CGAffineTransform(translationX: 0, y: containerView.bounds.maxY)
+        let displacement = containerView.bounds.height - presentingViewController.detailsOverlayView.frame.minY
+        let transform = CGAffineTransform(translationX: 0, y: displacement)
         
         UIView.animate(withDuration: self.duration, animations: {
             presentingViewController.transparentOverlayView.alpha = 0
-            presentingViewController.detailsOverlayView.transform = transform
+            presentingViewController.animatableViews.forEach { $0.transform = transform }
         }, completion: { finished in
             transitionContext.completeTransition(finished)
         })

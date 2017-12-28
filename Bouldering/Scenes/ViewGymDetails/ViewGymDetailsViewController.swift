@@ -19,7 +19,12 @@ protocol ViewGymDetailsDisplayLogic: class {
 class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic {
     
     @IBOutlet weak var transparentOverlayView: UIView!
+    @IBOutlet weak var whiteBackgroundView: UIView! // Required due to safe area on iPhone X
     @IBOutlet weak var detailsOverlayView: GymDetailsOverlayView!
+    
+    var animatableViews: [UIView] {
+        return [whiteBackgroundView, detailsOverlayView]
+    }
     
     var interactor: ViewGymDetailsBusinessLogic?
     var router: (NSObjectProtocol & ViewGymDetailsRoutingLogic & ViewGymDetailsDataPassing)?
