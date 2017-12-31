@@ -59,6 +59,10 @@ class ViewGymDetailsInteractor: ViewGymDetailsBusinessLogic, ViewGymDetailsDataS
     }
     
     func visitWebsite() {
-        print(#function)
+        guard let website = gym?.contacts.website,
+            let url = URL(string: website),
+            UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url)
     }
 }

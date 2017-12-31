@@ -2,7 +2,8 @@
   {
     "contacts" : {
       "phone" : "06-33999258",
-      "email" : "info@impactboulderhal.nl"
+      "email" : "info@impactboulderhal.nl",
+      "website" : "https:\/\/www.impactboulderhal.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -49,7 +50,8 @@
   {
     "contacts" : {
       "phone" : "033-7370362",
-      "email" : "info@keiboulderhal.nl"
+      "email" : "info@keiboulderhal.nl",
+      "website" : "http:\/\/www.keiboulderhal.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -96,7 +98,8 @@
   {
     "contacts" : {
       "phone" : "020-7370598",
-      "email" : "amsterdam@monk.nl"
+      "email" : "amsterdam@monk.nl",
+      "website" : "https:\/\/monk.nl\/amsterdam"
     },
     "openingHours" : {
       "monday" : {
@@ -143,7 +146,8 @@
   {
     "contacts" : {
       "phone" : "020-3346498",
-      "email" : "info@hetlabamsterdam.nl"
+      "email" : "info@hetlabamsterdam.nl",
+      "website" : "http:\/\/www.hetlabamsterdam.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -190,7 +194,8 @@
   {
     "contacts" : {
       "phone" : "088-1236850",
-      "email" : "rijnboulder@mountain-network.nl"
+      "email" : "rijnboulder@mountain-network.nl",
+      "website" : "https:\/\/mountain-network.nl\/klimcentra\/locaties\/bouldercentrum-arnhem"
     },
     "openingHours" : {
       "monday" : {
@@ -237,7 +242,8 @@
   {
     "contacts" : {
       "phone" : "076-7370319",
-      "email" : "info@boulderhalbruut.nl"
+      "email" : "info@boulderhalbruut.nl",
+      "website" : "https:\/\/www.boulderhalbruut.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -285,7 +291,8 @@
   {
     "contacts" : {
       "phone" : "015-7600090",
-      "email" : ""
+      "email" : "",
+      "website" : "http:\/\/www.delftsbleau.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -332,7 +339,8 @@
   {
     "contacts" : {
       "phone" : "070-2051144",
-      "email" : "info@boulderhaldecampus.nl"
+      "email" : "info@boulderhaldecampus.nl",
+      "website" : "https:\/\/www.boulderhaldecampus.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -379,7 +387,8 @@
   {
     "contacts" : {
       "phone" : "070-3599229",
-      "email" : ""
+      "email" : "uithof@deklimmuur.nl",
+      "website" : "https:\/\/www.facebook.com\/bouldermuurdenhaag"
     },
     "openingHours" : {
       "monday" : {
@@ -426,7 +435,8 @@
   {
     "contacts" : {
       "phone" : "040-2950488",
-      "email" : "eindhoven@monk.nl"
+      "email" : "eindhoven@monk.nl",
+      "website" : "https:\/\/monk.nl\/eindhoven"
     },
     "openingHours" : {
       "monday" : {
@@ -473,7 +483,8 @@
   {
     "contacts" : {
       "phone" : "06-10968707",
-      "email" : "info@cubebouldergym.nl"
+      "email" : "info@cubebouldergym.nl",
+      "website" : "https:\/\/www.cubebouldergym.nl\/"
     },
     "openingHours" : {
       "monday" : {
@@ -520,7 +531,8 @@
   {
     "contacts" : {
       "phone" : "050-2808444",
-      "email" : "info@gropo.nl"
+      "email" : "info@gropo.nl",
+      "website" : "http:\/\/www.gropo.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -567,7 +579,8 @@
   {
     "contacts" : {
       "phone" : "071-5763623",
-      "email" : "info@boulderhalkunststof.nl"
+      "email" : "info@boulderhalkunststof.nl",
+      "website" : "http:\/\/www.boulderhalkunststof.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -615,7 +628,8 @@
   {
     "contacts" : {
       "phone" : "024-7370460",
-      "email" : "boulderhal@gripnijmegen.nl"
+      "email" : "boulderhal@gripnijmegen.nl",
+      "website" : "http:\/\/www.gripnijmegen.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -662,7 +676,8 @@
   {
     "contacts" : {
       "phone" : "010-7171805",
-      "email" : "rotterdam@neoliet.nl"
+      "email" : "rotterdam@neoliet.nl",
+      "website" : "https:\/\/www.neoliet.nl\/rotterdam"
     },
     "openingHours" : {
       "monday" : {
@@ -709,7 +724,8 @@
   {
     "contacts" : {
       "phone" : "010-7371383",
-      "email" : "rotterdam@monk.nl"
+      "email" : "rotterdam@monk.nl",
+      "website" : "https:\/\/monk.nl\/rotterdam"
     },
     "openingHours" : {
       "monday" : {
@@ -756,7 +772,8 @@
   {
     "contacts" : {
       "phone" : "06-29327487",
-      "email" : "info@block013.nl"
+      "email" : "info@block013.nl",
+      "website" : "http:\/\/www.block013.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -803,7 +820,8 @@
   {
     "contacts" : {
       "phone" : "046-4526434",
-      "email" : "info@gravitonbouldergym.nl"
+      "email" : "info@gravitonbouldergym.nl",
+      "website" : "http:\/\/www.gravitonbouldergym.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -850,7 +868,8 @@
   {
     "contacts" : {
       "phone" : "030-3075750",
-      "email" : "info@boulderhalenergiehaven.nl"
+      "email" : "info@boulderhalenergiehaven.nl",
+      "website" : "http:\/\/boulderhalenergiehaven.nl"
     },
     "openingHours" : {
       "monday" : {
@@ -898,7 +917,8 @@
   {
     "contacts" : {
       "phone" : "030-7370615",
-      "email" : "info@boulderhalsterk.nl"
+      "email" : "info@boulderhalsterk.nl",
+      "website" : "https:\/\/www.boulderhalsterk.nl"
     },
     "openingHours" : {
       "monday" : {

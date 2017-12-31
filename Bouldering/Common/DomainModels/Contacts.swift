@@ -12,5 +12,6 @@ struct Contacts: Codable {
     
     let phone: String
     let email: String
+    let website: String
 
 }
