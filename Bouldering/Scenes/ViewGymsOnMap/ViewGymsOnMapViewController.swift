@@ -67,6 +67,12 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         interactor?.start()
     }
     
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router?.prepare(for: segue, sender: sender)
+    }
+    
     // MARK: Do something
     
     func display(viewModels: [GymPoiViewModel]) {
@@ -85,10 +91,16 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         zoom(to: coordinates)
     }
     
-    private func zoom(to center: CLLocationCoordinate2D) {
-        let radius: CLLocationDistance = 10000 // In meters
-        let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
-        mapView.setRegion(region, animated: true)
+    /// Scroll map to a location
+    ///
+    /// - Parameters:
+    ///   - center: coordinates of location
+    ///   - radius: radius of map in meters
+    private func zoom(to center: CLLocationCoordinate2D, radius: CLLocationDistance = 10000) {
+        MKMapView.animate(withDuration: 0.3, animations: {
+            let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+            self.mapView.setRegion(region, animated: true)
+        })
     }
     
 }
@@ -102,6 +114,17 @@ extension ViewGymsOnMapViewController: MKMapViewDelegate {
         annotationView.configure(annotation: gymPoiAnnotation)
 
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation else { return }
+        
+        mapView.deselectAnnotation(annotation, animated: false)
+        zoom(to: annotation.coordinate, radius: 2500)
+        
+        let coordinates = Coordinates(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+        interactor?.selectedGym(at: coordinates)
+        router?.navigateToDetails()
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

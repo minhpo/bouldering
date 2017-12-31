@@ -25,4 +25,3 @@ public struct Address: CustomStringConvertible, Codable {
             .joined(separator: ", ")
     }
 }
-

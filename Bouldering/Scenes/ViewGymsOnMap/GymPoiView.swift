@@ -11,12 +11,15 @@ import MapKit
 
 class GymPoiView: MKAnnotationView {
     
+    override func awakeFromNib() {
+        centerOffset = CGPoint(x: 0, y: -bounds.midY)
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     func configure(annotation: GymPoiAnnotation) {
         self.annotation = annotation
         nameLabel.text = annotation.title
-        centerOffset = CGPoint(x: 0, y: -bounds.midY)
     }
 
 }

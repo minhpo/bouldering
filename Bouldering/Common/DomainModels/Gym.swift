@@ -11,11 +11,9 @@ import Foundation
 struct Gym: Codable {
     
     let name: String
-    let address: String
-    let housenumber: Int
-    let postfix: String?
-    let postalCode: String
-    let city: String
-    var coordinates: Coordinates
+    let address: Address
+    let contacts: Contacts
+    let openingHours: OpeningHoursCollection
+    let coordinates: Coordinates
     
 }

@@ -29,8 +29,28 @@
 		4657C13F1FEF24B3006DE79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C13E1FEF24B3006DE79B /* AppDelegate.swift */; };
 		4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */; };
 		4657C1441FEF2797006DE79B /* ApplicationInitialiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */; };
+		46656ACE1FF532E2000DDCE8 /* GymContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46656ACD1FF532E2000DDCE8 /* GymContactsDelegate.swift */; };
+		46656AD21FF8D735000DDCE8 /* HideGymDetailsInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46656AD11FF8D735000DDCE8 /* HideGymDetailsInteractionController.swift */; };
+		46656AD51FF8E629000DDCE8 /* HideGymDetailsOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46656AD31FF8E629000DDCE8 /* HideGymDetailsOverlayAnimator.swift */; };
+		46656AD61FF8E629000DDCE8 /* ShowGymDetailsOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46656AD41FF8E629000DDCE8 /* ShowGymDetailsOverlayAnimator.swift */; };
+		468AEDEC1FF4DEF00088D208 /* GymDetailsContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468AEDEB1FF4DEF00088D208 /* GymDetailsContentTableViewController.swift */; };
+		468AEDEE1FF4DF490088D208 /* GymGeneralDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468AEDED1FF4DF490088D208 /* GymGeneralDetailsTableViewCell.swift */; };
+		468AEDF01FF4DF550088D208 /* GymOpeningHoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468AEDEF1FF4DF550088D208 /* GymOpeningHoursTableViewCell.swift */; };
 		469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E26BC1FEE8C0D00CB303B /* Assets.xcassets */; };
 		46B0C3391FF16F6700BE3261 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */; };
+		46B0C33B1FF251D700BE3261 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C33A1FF251D700BE3261 /* Address.swift */; };
+		46B0C33D1FF251E700BE3261 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C33C1FF251E700BE3261 /* Contacts.swift */; };
+		46B0C33F1FF251F400BE3261 /* OpeningHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C33E1FF251F400BE3261 /* OpeningHours.swift */; };
+		46B0C3411FF251FE00BE3261 /* OpeningHoursCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3401FF251FE00BE3261 /* OpeningHoursCollection.swift */; };
+		46B0C3491FF2546100BE3261 /* ViewGymDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3431FF2546100BE3261 /* ViewGymDetailsPresenter.swift */; };
+		46B0C34B1FF2546100BE3261 /* ViewGymDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */; };
+		46B0C34D1FF2546100BE3261 /* ViewGymDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */; };
+		46B0C34E1FF2546100BE3261 /* ViewGymDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */; };
+		46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */; };
+		46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */; };
+		46B0C3551FF2E5EA00BE3261 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B0C3531FF2E5EA00BE3261 /* Localizable.strings */; };
+		46B0C3591FF3925600BE3261 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C3581FF3925600BE3261 /* Navigation.swift */; };
+		46B0C35B1FF3928500BE3261 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */; };
 		46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */; };
 		46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C11FEFA1F700DAA174 /* LocationService.swift */; };
 		46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */; };
@@ -72,10 +92,31 @@
 		4657C13E1FEF24B3006DE79B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4657C1401FEF24CD006DE79B /* ApplicationInitialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInitialiser.swift; sourceTree = "<group>"; };
 		4657C1431FEF2797006DE79B /* ApplicationInitialiserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInitialiserTests.swift; sourceTree = "<group>"; };
+		46656ACD1FF532E2000DDCE8 /* GymContactsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymContactsDelegate.swift; sourceTree = "<group>"; };
+		46656AD11FF8D735000DDCE8 /* HideGymDetailsInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideGymDetailsInteractionController.swift; sourceTree = "<group>"; };
+		46656AD31FF8E629000DDCE8 /* HideGymDetailsOverlayAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideGymDetailsOverlayAnimator.swift; sourceTree = "<group>"; };
+		46656AD41FF8E629000DDCE8 /* ShowGymDetailsOverlayAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowGymDetailsOverlayAnimator.swift; sourceTree = "<group>"; };
+		468AEDEB1FF4DEF00088D208 /* GymDetailsContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsContentTableViewController.swift; sourceTree = "<group>"; };
+		468AEDED1FF4DF490088D208 /* GymGeneralDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymGeneralDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		468AEDEF1FF4DF550088D208 /* GymOpeningHoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymOpeningHoursTableViewCell.swift; sourceTree = "<group>"; };
 		469E26B21FEE8C0D00CB303B /* Bouldering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouldering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E26BC1FEE8C0D00CB303B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E26C11FEE8C0D00CB303B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		46B0C33A1FF251D700BE3261 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		46B0C33C1FF251E700BE3261 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		46B0C33E1FF251F400BE3261 /* OpeningHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHours.swift; sourceTree = "<group>"; };
+		46B0C3401FF251FE00BE3261 /* OpeningHoursCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHoursCollection.swift; sourceTree = "<group>"; };
+		46B0C3431FF2546100BE3261 /* ViewGymDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsPresenter.swift; sourceTree = "<group>"; };
+		46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsRouter.swift; sourceTree = "<group>"; };
+		46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsViewController.swift; sourceTree = "<group>"; };
+		46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGymDetailsInteractor.swift; sourceTree = "<group>"; };
+		46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsOverlayView.swift; sourceTree = "<group>"; };
+		46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailsViewModel.swift; sourceTree = "<group>"; };
+		46B0C3541FF2E5EA00BE3261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Bouldering/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		46B0C3561FF2E5F500BE3261 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = ../../nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46B0C3581FF3925600BE3261 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		46F227BF1FEFA1D000DAA174 /* RegionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMonitor.swift; sourceTree = "<group>"; };
 		46F227C11FEFA1F700DAA174 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		46F227C41FF0F2F400DAA174 /* NotificationBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBroadcaster.swift; sourceTree = "<group>"; };
@@ -99,18 +140,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		460024B41FF14B6F00D7667C /* Extensions */ = {
+		460024B41FF14B6F00D7667C /* UIViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				460024B51FF14B8700D7667C /* UIView+Nib.swift */,
 				46B0C3381FF16F6700BE3261 /* UIView+Layer.swift */,
 			);
-			path = Extensions;
+			path = UIViewExtensions;
 			sourceTree = "<group>";
 		};
 		461482031FEEAD8B006466EE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				46B0C3421FF2544400BE3261 /* ViewGymDetails */,
 				4614820A1FEEADD8006466EE /* ViewGymsOnMap */,
 			);
 			path = Scenes;
@@ -130,11 +172,12 @@
 			children = (
 				4657C13D1FEF2490006DE79B /* Core */,
 				4614821C1FEEB38D006466EE /* DomainModels */,
-				460024B41FF14B6F00D7667C /* Extensions */,
 				461482311FEEB5A2006466EE /* GymsRepository */,
 				461482371FEEBA31006466EE /* InversionOfControl */,
 				4657C13A1FEF1B94006DE79B /* Locations */,
+				46B0C3571FF3920E00BE3261 /* Navigation */,
 				46F227C31FF0F24F00DAA174 /* Notifications */,
+				460024B41FF14B6F00D7667C /* UIViewExtensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -167,6 +210,7 @@
 			children = (
 				4614821A1FEEB348006466EE /* gyms.json */,
 				4657C1341FEEDA7B006DE79B /* InfoPlist.strings */,
+				46B0C3531FF2E5EA00BE3261 /* Localizable.strings */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -174,8 +218,12 @@
 		4614821C1FEEB38D006466EE /* DomainModels */ = {
 			isa = PBXGroup;
 			children = (
+				46B0C33A1FF251D700BE3261 /* Address.swift */,
+				46B0C33C1FF251E700BE3261 /* Contacts.swift */,
 				4614821D1FEEB3A3006466EE /* Coordinates.swift */,
 				4614821F1FEEB3B3006466EE /* Gym.swift */,
+				46B0C33E1FF251F400BE3261 /* OpeningHours.swift */,
+				46B0C3401FF251FE00BE3261 /* OpeningHoursCollection.swift */,
 			);
 			path = DomainModels;
 			sourceTree = "<group>";
@@ -270,6 +318,35 @@
 				461482041FEEAD94006466EE /* Storyboards */,
 			);
 			path = Bouldering;
+			sourceTree = "<group>";
+		};
+		46B0C3421FF2544400BE3261 /* ViewGymDetails */ = {
+			isa = PBXGroup;
+			children = (
+				46656ACD1FF532E2000DDCE8 /* GymContactsDelegate.swift */,
+				468AEDEB1FF4DEF00088D208 /* GymDetailsContentTableViewController.swift */,
+				46B0C34F1FF2811800BE3261 /* GymDetailsOverlayView.swift */,
+				46B0C3511FF2E12B00BE3261 /* GymDetailsViewModel.swift */,
+				468AEDED1FF4DF490088D208 /* GymGeneralDetailsTableViewCell.swift */,
+				468AEDEF1FF4DF550088D208 /* GymOpeningHoursTableViewCell.swift */,
+				46656AD11FF8D735000DDCE8 /* HideGymDetailsInteractionController.swift */,
+				46656AD31FF8E629000DDCE8 /* HideGymDetailsOverlayAnimator.swift */,
+				46656AD41FF8E629000DDCE8 /* ShowGymDetailsOverlayAnimator.swift */,
+				46B0C3481FF2546100BE3261 /* ViewGymDetailsInteractor.swift */,
+				46B0C3431FF2546100BE3261 /* ViewGymDetailsPresenter.swift */,
+				46B0C3451FF2546100BE3261 /* ViewGymDetailsRouter.swift */,
+				46B0C3471FF2546100BE3261 /* ViewGymDetailsViewController.swift */,
+			);
+			path = ViewGymDetails;
+			sourceTree = "<group>";
+		};
+		46B0C3571FF3920E00BE3261 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				46B0C3581FF3925600BE3261 /* Navigation.swift */,
+				46B0C35A1FF3928500BE3261 /* UIViewController+Navigation.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		46F227C31FF0F24F00DAA174 /* Notifications */ = {
@@ -381,6 +458,7 @@
 				461482091FEEADBB006466EE /* Main.storyboard in Resources */,
 				4614821B1FEEB348006466EE /* gyms.json in Resources */,
 				460024B11FF1380900D7667C /* GymPoiView.xib in Resources */,
+				46B0C3551FF2E5EA00BE3261 /* Localizable.strings in Resources */,
 				469E26BD1FEE8C0D00CB303B /* Assets.xcassets in Resources */,
 				461482081FEEADBB006466EE /* LaunchScreen.storyboard in Resources */,
 				4657C1361FEEDA7B006DE79B /* InfoPlist.strings in Resources */,
@@ -420,25 +498,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468AEDEC1FF4DEF00088D208 /* GymDetailsContentTableViewController.swift in Sources */,
+				46B0C3411FF251FE00BE3261 /* OpeningHoursCollection.swift in Sources */,
 				4657C13F1FEF24B3006DE79B /* AppDelegate.swift in Sources */,
+				46B0C34D1FF2546100BE3261 /* ViewGymDetailsViewController.swift in Sources */,
 				461482391FEEBA53006466EE /* ServiceLocator.swift in Sources */,
 				460024B61FF14B8700D7667C /* UIView+Nib.swift in Sources */,
 				461482161FEEAE0B006466EE /* ViewGymsOnMapInteractor.swift in Sources */,
+				46B0C3521FF2E12B00BE3261 /* GymDetailsViewModel.swift in Sources */,
+				46656AD51FF8E629000DDCE8 /* HideGymDetailsOverlayAnimator.swift in Sources */,
+				46B0C34B1FF2546100BE3261 /* ViewGymDetailsRouter.swift in Sources */,
+				46B0C33F1FF251F400BE3261 /* OpeningHours.swift in Sources */,
 				461482111FEEAE0B006466EE /* ViewGymsOnMapPresenter.swift in Sources */,
 				461482151FEEAE0B006466EE /* ViewGymsOnMapViewController.swift in Sources */,
 				461482331FEEB64A006466EE /* GymsRepository.swift in Sources */,
 				4657C1411FEF24CD006DE79B /* ApplicationInitialiser.swift in Sources */,
+				46656AD61FF8E629000DDCE8 /* ShowGymDetailsOverlayAnimator.swift in Sources */,
 				46F227C21FEFA1F700DAA174 /* LocationService.swift in Sources */,
 				4614821E1FEEB3A3006466EE /* Coordinates.swift in Sources */,
 				4657C1391FEEE8D9006DE79B /* GymPoiAnnotation.swift in Sources */,
+				46B0C35B1FF3928500BE3261 /* UIViewController+Navigation.swift in Sources */,
 				461482201FEEB3B3006466EE /* Gym.swift in Sources */,
 				46F227C51FF0F2F400DAA174 /* NotificationBroadcaster.swift in Sources */,
 				4657C13C1FEF1BB3006DE79B /* LocationMonitor.swift in Sources */,
+				46B0C33B1FF251D700BE3261 /* Address.swift in Sources */,
 				46B0C3391FF16F6700BE3261 /* UIView+Layer.swift in Sources */,
+				46B0C34E1FF2546100BE3261 /* ViewGymDetailsInteractor.swift in Sources */,
 				4614823B1FEEBF5D006466EE /* GymPoiViewModel.swift in Sources */,
+				468AEDEE1FF4DF490088D208 /* GymGeneralDetailsTableViewCell.swift in Sources */,
 				46F227C01FEFA1D000DAA174 /* RegionMonitor.swift in Sources */,
+				46656ACE1FF532E2000DDCE8 /* GymContactsDelegate.swift in Sources */,
 				461482131FEEAE0B006466EE /* ViewGymsOnMapRouter.swift in Sources */,
+				468AEDF01FF4DF550088D208 /* GymOpeningHoursTableViewCell.swift in Sources */,
 				460024B31FF1384D00D7667C /* GymPoiView.swift in Sources */,
+				46B0C3491FF2546100BE3261 /* ViewGymDetailsPresenter.swift in Sources */,
+				46B0C3591FF3925600BE3261 /* Navigation.swift in Sources */,
+				46B0C3501FF2811800BE3261 /* GymDetailsOverlayView.swift in Sources */,
+				46B0C33D1FF251E700BE3261 /* Contacts.swift in Sources */,
+				46656AD21FF8D735000DDCE8 /* HideGymDetailsInteractionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +557,15 @@
 				4657C1371FEEDA94006DE79B /* nl */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B0C3531FF2E5EA00BE3261 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B0C3541FF2E5EA00BE3261 /* Base */,
+				46B0C3561FF2E5F500BE3261 /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

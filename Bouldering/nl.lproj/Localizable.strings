@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Bouldering
+
+  Created by Po Sam on 26/12/2017.
+  Copyright © 2017 Mobairu. All rights reserved.
+*/
+
+"opening_hours_header" = "Openingstijden";
+
+"monday" = "Maandag";
+"tuesday" = "Dinsdag";
+"wednesday" = "Woensdag";
+"thursday" = "Donderdag";
+"friday" = "Vrijdag";
+"saturday" = "Zaterdag";
+"sunday" = "Zondag";
