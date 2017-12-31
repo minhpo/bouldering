@@ -437,6 +437,14 @@
                                                 <constraint firstItem="WRh-2v-zHv" firstAttribute="top" secondItem="Fur-zN-zu0" secondAttribute="top" constant="16" id="zkZ-yC-3v9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="defaultTextColor">
+                                                <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedTextColor">
+                                                <color key="value" red="1" green="0.55294117649999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="fridayLabel" destination="EuJ-sr-Ltq" id="6Wv-2y-cwG"/>
                                             <outlet property="fridayOpeningHoursLabel" destination="tZd-V3-7cc" id="EAr-ue-oFR"/>

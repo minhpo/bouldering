@@ -10,6 +10,9 @@ import UIKit
 
 class GymOpeningHoursTableViewCell: UITableViewCell {
     
+    @IBInspectable var defaultTextColor: UIColor = UIColor.darkText
+    @IBInspectable var highlightedTextColor: UIColor = UIColor.darkText
+    
     @IBOutlet weak var hoursHeaderLabel: UILabel! {
         didSet {
             hoursHeaderLabel.text = NSLocalizedString("opening_hours_header", comment: "")
@@ -108,6 +111,31 @@ class GymOpeningHoursTableViewCell: UITableViewCell {
         fridayOpeningHoursLabel.text = viewModel.openingHours[.friday]
         saturdayOpeningHoursLabel.text = viewModel.openingHours[.saturday]
         sundayOpeningHoursLabel.text = viewModel.openingHours[.sunday]
+        
+        highlightToday()
+    }
+    
+    private func highlightToday() {
+        let labels = [[sundayLabel, sundayOpeningHoursLabel],
+                      [mondayLabel, mondayOpeningHoursLabel],
+                      [tuesdayLabel, tuesdayOpeningHoursLabel],
+                      [wednesdayLabel, wednesdayOpeningHoursLabel],
+                      [thursdayLabel, thursdayOpeningHoursLabel],
+                      [fridayLabel, fridayOpeningHoursLabel],
+                      [saturdayLabel, saturdayOpeningHoursLabel]]
+        
+        // Weekday units are the numbers 1 through n, where n is the number of days in the week.
+        // In the Gregorian calendar, n is 7 and Sunday is represented by 1.
+        // https://developer.apple.com/documentation/foundation/nsdatecomponents/1410442-weekday
+        let weekday = Calendar.current.component(.weekday, from: Date())
+        
+        labels.enumerated().forEach { index, collection in
+            let textColor = index == weekday - 1
+            ? highlightedTextColor
+            : defaultTextColor
+            
+            collection.forEach { $0?.textColor = textColor }
+        }
     }
 
 }
