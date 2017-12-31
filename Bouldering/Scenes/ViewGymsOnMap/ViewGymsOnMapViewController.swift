@@ -97,8 +97,10 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     ///   - center: coordinates of location
     ///   - radius: radius of map in meters
     private func zoom(to center: CLLocationCoordinate2D, radius: CLLocationDistance = 10000) {
-        let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
-        mapView.setRegion(region, animated: true)
+        MKMapView.animate(withDuration: 0.3, animations: {
+            let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+            self.mapView.setRegion(region, animated: true)
+        })
     }
     
 }

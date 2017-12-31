@@ -10,7 +10,7 @@ import UIKit
 
 class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    fileprivate let duration: TimeInterval = 1
+    fileprivate let duration: TimeInterval = 0.3
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return self.duration
@@ -36,14 +36,16 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         UIView.animate(withDuration: 0.3, animations: {
             presentedViewController.animatableViews.forEach { $0.transform = CGAffineTransform.identity }
             presentedViewController.transparentOverlayView.alpha = 1
-        })
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: false) {
-                presentedViewController.view.insertSubview(snapshot, at: 0)
+        }, completion: { _ in
+            if !transitionContext.transitionWasCancelled {
+                if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: false) {
+                    presentedViewController.view.insertSubview(snapshot, at: 0)
+                }
+                
+                transitionContext.completeTransition(true)
+            } else {
+                transitionContext.completeTransition(false)
             }
-            
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     
