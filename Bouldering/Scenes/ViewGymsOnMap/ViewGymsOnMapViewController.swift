@@ -91,7 +91,6 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
         zoom(to: coordinates)
     }
     
-    
     /// Scroll map to a location
     ///
     /// - Parameters:

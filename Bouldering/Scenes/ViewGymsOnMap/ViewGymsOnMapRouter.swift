@@ -42,25 +42,7 @@ class ViewGymsOnMapRouter: NSObject, ViewGymsOnMapRoutingLogic, ViewGymsOnMapDat
             if let selectedGym = dataStore?.selectedGym {
                 viewGymDetailsViewController.interactor?.set(gym: selectedGym)
             }
-            
-            viewGymDetailsViewController.transitioningDelegate = self
         }
-    }
-    
-}
-
-extension ViewGymsOnMapRouter: UIViewControllerTransitioningDelegate {
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard presenting == viewController, presented is ViewGymDetailsViewController else { return nil }
-        
-        return ShowGymDetailsOverlayAnimator()
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard dismissed is ViewGymDetailsViewController else { return nil }
-        
-        return HideGymDetailsOverlayAnimator()
     }
     
 }

@@ -33,8 +33,8 @@ class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         UIView.animate(withDuration: duration, animations: {
             presentingViewController.transparentOverlayView.alpha = 0
             presentingViewController.animatableViews.forEach { $0.transform = transform }
-        }, completion: { finished in
-            transitionContext.completeTransition(finished)
+        }, completion: { _ in
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     

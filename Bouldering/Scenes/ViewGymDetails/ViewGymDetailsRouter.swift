@@ -13,6 +13,7 @@
 import UIKit
 
 @objc protocol ViewGymDetailsRoutingLogic {
+    func viewDidLoad()
     func navigateToMap()
 }
 
@@ -23,9 +24,20 @@ protocol ViewGymDetailsDataPassing {
 class ViewGymDetailsRouter: NSObject, ViewGymDetailsRoutingLogic, ViewGymDetailsDataPassing {
     
     weak var viewController: ViewGymDetailsViewController?
+    
     var dataStore: ViewGymDetailsDataStore?
     
+    private var interactionController: HideGymDetailsInteractionController?
+    
     // MARK: Routing
+    
+    func viewDidLoad() {
+        viewController?.transitioningDelegate = self
+        
+        if let view = viewController?.detailsOverlayView {
+            interactionController = HideGymDetailsInteractionController(view: view, callback: navigateToMap)
+        }
+    }
     
     // MARK: Navigation
     
@@ -34,5 +46,24 @@ class ViewGymDetailsRouter: NSObject, ViewGymDetailsRoutingLogic, ViewGymDetails
     }
     
     // MARK: Passing data
+    
+}
+
+extension ViewGymDetailsRouter: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return ShowGymDetailsOverlayAnimator()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return HideGymDetailsOverlayAnimator()
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let interactionController = self.interactionController,
+            interactionController.interactionInProgress else { return nil }
+        
+        return interactionController
+    }
     
 }

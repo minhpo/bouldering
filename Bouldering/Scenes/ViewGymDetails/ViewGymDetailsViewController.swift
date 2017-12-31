@@ -66,6 +66,8 @@ class ViewGymDetailsViewController: UIViewController, ViewGymDetailsDisplayLogic
         super.viewDidLoad()
         
         setContentViewController()
+        
+        router?.viewDidLoad()
         interactor?.start()
     }
     

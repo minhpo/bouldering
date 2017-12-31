@@ -43,7 +43,7 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
                 presentedViewController.view.insertSubview(snapshot, at: 0)
             }
             
-            transitionContext.completeTransition(true)
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
     
