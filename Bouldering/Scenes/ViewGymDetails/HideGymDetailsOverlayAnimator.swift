@@ -10,17 +10,18 @@ import UIKit
 
 class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    fileprivate let duration: TimeInterval = 0.3
+    fileprivate let duration: TimeInterval = ViewGymsOnMapViewController.animationDuration
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return self.duration
+        return duration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
         guard let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? ViewGymDetailsViewController,
-            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewGymsOnMapViewController else {
+            let presentedViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewGymsOnMapViewController,
+            let snapshot = presentingViewController.view.subviews.first else {
                 return
         }
         
@@ -33,7 +34,11 @@ class HideGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         UIView.animate(withDuration: duration, animations: {
             presentingViewController.transparentOverlayView.alpha = 0
             presentingViewController.animatableViews.forEach { $0.transform = transform }
+            
+            let displacement = abs(snapshot.frame.minY)
+            snapshot.transform = CGAffineTransform(translationX: 0, y: displacement)
         }, completion: { _ in
+            presentedViewController.mapView.transform = CGAffineTransform.identity
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
