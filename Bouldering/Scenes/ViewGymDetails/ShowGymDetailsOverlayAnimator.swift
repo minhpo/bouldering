@@ -10,10 +10,10 @@ import UIKit
 
 class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    fileprivate let duration: TimeInterval = 0.3
+    fileprivate let duration: TimeInterval = ViewGymsOnMapViewController.animationDuration
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return self.duration
+        return duration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -33,12 +33,16 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
         
         presentedViewController.transparentOverlayView.alpha = 0
         
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: duration, animations: {
+            let mapViewDisplacement = self.getMapViewDisplacement(containerView: containerView, presentingViewController: presentingViewController, presentedViewController: presentedViewController)
+            presentingViewController.mapView.transform = CGAffineTransform(translationX: 0, y: -mapViewDisplacement)
+            
             presentedViewController.animatableViews.forEach { $0.transform = CGAffineTransform.identity }
             presentedViewController.transparentOverlayView.alpha = 1
         }, completion: { _ in
             if !transitionContext.transitionWasCancelled {
-                if let snapshot = presentingViewController.view.snapshotView(afterScreenUpdates: false) {
+                if let snapshot = presentingViewController.mapView.snapshotView(afterScreenUpdates: false) {
+                    snapshot.frame = presentingViewController.mapView.frame
                     presentedViewController.view.insertSubview(snapshot, at: 0)
                 }
                 
@@ -47,6 +51,15 @@ class ShowGymDetailsOverlayAnimator: NSObject, UIViewControllerAnimatedTransitio
                 transitionContext.completeTransition(false)
             }
         })
+    }
+    
+    private func getMapViewDisplacement(containerView: UIView, presentingViewController: ViewGymsOnMapViewController, presentedViewController: ViewGymDetailsViewController) -> CGFloat {
+        let newHeight = containerView.bounds.height - presentedViewController.detailsOverlayView.bounds.height
+        let newCenterPosition = newHeight/2
+        
+        let displacement = containerView.bounds.midY - newCenterPosition
+        
+        return displacement
     }
     
 }

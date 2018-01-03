@@ -30,6 +30,8 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     var interactor: ViewGymsOnMapBusinessLogic?
     var router: (NSObjectProtocol & ViewGymsOnMapRoutingLogic & ViewGymsOnMapDataPassing)?
     
+    static let animationDuration: TimeInterval = 0.5
+    
     private var shouldZoomToUserLocation = true
     
     // MARK: Object lifecycle
@@ -97,7 +99,7 @@ class ViewGymsOnMapViewController: UIViewController, ViewGymsOnMapDisplayLogic {
     ///   - center: coordinates of location
     ///   - radius: radius of map in meters
     private func zoom(to center: CLLocationCoordinate2D, radius: CLLocationDistance = 10000) {
-        MKMapView.animate(withDuration: 0.3, animations: {
+        MKMapView.animate(withDuration: ViewGymsOnMapViewController.animationDuration, animations: {
             let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
             self.mapView.setRegion(region, animated: true)
         })
