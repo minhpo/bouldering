@@ -15,3 +15,8 @@
 "friday" = "Friday";
 "saturday" = "Saturday";
 "sunday" = "Sunday";
+
+"geofence_entry_title" = "Hey";
+"geofence_entry_message_template" = "You are near %@. Enjoy your climbing.";
+"geofence_exit_title" = "Goodbye!";
+"geofence_exit_message_template" = "Hope to see you soon at %@.";

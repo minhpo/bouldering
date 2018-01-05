@@ -71,7 +71,10 @@ extension BoulderingInitialiser: RegionMonitorDelegate {
         let broadcaster = serviceLocator.notificationBroadcaster
         
         if let gym = repository.getGym(at: coordinates) {
-            broadcaster.broadcast(title: "Have fun", body: "You are close to \(gym.name)", after: 1)
+            let title = NSLocalizedString("geofence_entry_title", comment: "")
+            let bodyTemplate = NSLocalizedString("geofence_entry_message_template", comment: "")
+            let body = String(format: bodyTemplate, gym.name)
+            broadcaster.broadcast(title: title, body: body, after: 1)
         }
     }
     
@@ -80,7 +83,10 @@ extension BoulderingInitialiser: RegionMonitorDelegate {
         let broadcaster = serviceLocator.notificationBroadcaster
         
         if let gym = repository.getGym(at: coordinates) {
-            broadcaster.broadcast(title: "Goodbye", body: "You left \(gym.name)", after: 1)
+            let title = NSLocalizedString("geofence_exit_title", comment: "")
+            let bodyTemplate = NSLocalizedString("geofence_exit_message_template", comment: "")
+            let body = String(format: bodyTemplate, gym.name)
+            broadcaster.broadcast(title: title, body: body, after: 1)
         }
     }
     
