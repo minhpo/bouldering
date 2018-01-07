@@ -469,15 +469,16 @@
       }
     },
     "coordinates" : {
-      "longitude" : 5.4614919999999998,
-      "latitude" : 51.446244
+      "longitude" : 5.4586380999999999,
+      "latitude" : 51.443477299999998
     },
     "name" : "Monk Bouldergym Eindhoven",
     "address" : {
-      "housenumber" : 2,
-      "street" : "Glaslaan",
+      "housenumber" : 1,
+      "postalCode" : "5616LV",
+      "street" : "Berkenstraat",
       "city" : "Eindhoven",
-      "postalCode" : "5616LW"
+      "postfix" : "A"
     }
   },
   {
