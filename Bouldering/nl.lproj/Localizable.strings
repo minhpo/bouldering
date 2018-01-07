@@ -15,3 +15,8 @@
 "friday" = "Vrijdag";
 "saturday" = "Zaterdag";
 "sunday" = "Zondag";
+
+"geofence_entry_title" = "Wat leuk!";
+"geofence_entry_message_template" = "Je bent in de buurt van %@. Veel plezier met klimmen.";
+"geofence_exit_title" = "Tot ziens!";
+"geofence_exit_message_template" = "Hoop je snel weer te zien bij %@.";

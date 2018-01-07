@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "469E26B11FEE8C0D00CB303B"
-               BuildableName = "Bouldering.app"
-               BlueprintName = "Bouldering"
+               BuildableName = "Boulder Gyms.app"
+               BlueprintName = "Boulder Gyms"
                ReferencedContainer = "container:Bouldering.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "469E26B11FEE8C0D00CB303B"
-            BuildableName = "Bouldering.app"
-            BlueprintName = "Bouldering"
+            BuildableName = "Boulder Gyms.app"
+            BlueprintName = "Boulder Gyms"
             ReferencedContainer = "container:Bouldering.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "469E26B11FEE8C0D00CB303B"
-            BuildableName = "Bouldering.app"
-            BlueprintName = "Bouldering"
+            BuildableName = "Boulder Gyms.app"
+            BlueprintName = "Boulder Gyms"
             ReferencedContainer = "container:Bouldering.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -87,8 +87,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "469E26B11FEE8C0D00CB303B"
-            BuildableName = "Bouldering.app"
-            BlueprintName = "Bouldering"
+            BuildableName = "Boulder Gyms.app"
+            BlueprintName = "Boulder Gyms"
             ReferencedContainer = "container:Bouldering.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
