@@ -2,23 +2,24 @@ import Foundation
 
 public class GymsRepository {
     
-    public class func getIds() -> [String]? {
+    public class func all() -> [Gym]? {
         guard let content = getRawData() else { return nil }
         
-        return extractIds(from: content)
+        return convertToModels(content: content)
     }
     
     private class func getRawData() -> String? {
         let fileManager = FileManager.default
-        let path = "\(fileManager.currentDirectoryPath)/Resources/Ids.csv"
+        let path = "\(fileManager.currentDirectoryPath)/Resources/gyms.json"
         
         return try? String(contentsOfFile: path)
     }
     
-    private class func extractIds(from content: String) -> [String] {
-        return content.split(separator: "\n")
-            .map(String.init)
-            .flatMap { $0.split(separator: ",").map(String.init).last }
+    private class func convertToModels(content: String) -> [Gym]? {
+        guard let data = content.data(using: .utf8) else { return nil }
+        
+        let decoder = JSONDecoder()
+        return try? decoder.decode([Gym].self, from: data)
     }
     
 }

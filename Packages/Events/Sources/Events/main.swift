@@ -1,6 +1,12 @@
 import Foundation
 
-let gymIds = GymsRepository.getIds() ?? []
+let gyms = GymsRepository.all() ?? []
+let gymIds = gyms.map { $0.id }
+
+var gymsLookupTable: [String: Gym] = [:]
+zip(gymIds, gyms).forEach { id, gym in
+    gymsLookupTable["\(id)"] = gym
+}
 
 let apiClient = FacebookApiClient()
 let decoder = FacebookJSONDecoder()
@@ -15,8 +21,13 @@ gymIds.forEach { id in
     guard let data = apiClient.events(for: id),
         let decodedEvents = decoder.decode(data: data) else { return }
     
-    let relevantEvents = decodedEvents.filter { gymIds.contains($0.place?.id ?? "") && $0.start >= date }
-    events.append(contentsOf: relevantEvents)
+    decodedEvents.forEach { facebookEvent in
+        guard facebookEvent.start >= date,
+            let gym = gymsLookupTable[facebookEvent.place?.id ?? ""],
+            let event = EventsFactory.makeEvent(from: facebookEvent, at: gym) else { return }
+        
+        events.append(event)
+    }
 }
 
 events.sort(by: { $0.start > $1.start })

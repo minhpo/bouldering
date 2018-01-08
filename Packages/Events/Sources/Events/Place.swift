@@ -1,7 +1,9 @@
 import Foundation
 
 public struct Place: Codable {
-    public let id: String?
+    
     public let name: String
-    public let location: Location?
+    public let address: Address
+    public let coordinates: Coordinates
+    
 }
