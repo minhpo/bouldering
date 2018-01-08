@@ -4,7 +4,7 @@ public class FacebookJSONDecoder {
     
     public init() { }
     
-    public func decode(data: Data) -> [Event]? {
+    public func decode(data: Data) -> [FacebookEvent]? {
         do {
             guard let raw = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                 let eventsData = extractEventsData(json: raw) else { return nil }
@@ -14,7 +14,7 @@ public class FacebookJSONDecoder {
                 decoder.dateDecodingStrategy = .iso8601
             }
             
-            return try decoder.decode([Event].self, from: eventsData)
+            return try decoder.decode([FacebookEvent].self, from: eventsData)
         } catch {
             return nil
         }

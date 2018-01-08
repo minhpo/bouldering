@@ -1,0 +1,986 @@
+[
+  {
+    "contacts" : {
+      "phone" : "06-33999258",
+      "email" : "info@impactboulderhal.nl",
+      "website" : "https:\/\/www.impactboulderhal.nl"
+    },
+    "id" : 1326294580736017,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "tuesday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "wednesday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.2378263999999994,
+      "latitude" : 52.375709399999998
+    },
+    "name" : "Impact boulderhal",
+    "address" : {
+      "housenumber" : 6,
+      "street" : "Bongerdstraat",
+      "city" : "Almere",
+      "postalCode" : "1326AB"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "033-7370362",
+      "email" : "info@keiboulderhal.nl",
+      "website" : "http:\/\/www.keiboulderhal.nl"
+    },
+    "id" : 1434597866805065,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.3649222999999999,
+      "latitude" : 52.1566592
+    },
+    "name" : "Kei Boulderhal",
+    "address" : {
+      "housenumber" : 314,
+      "street" : "Soesterweg",
+      "city" : "Amersfoort",
+      "postalCode" : "3812BH"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "020-7370598",
+      "email" : "amsterdam@monk.nl",
+      "website" : "https:\/\/monk.nl\/amsterdam"
+    },
+    "id" : 106574276158048,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.9292669999999994,
+      "latitude" : 52.383476999999999
+    },
+    "name" : "Monk Bouldergym Amsterdam",
+    "address" : {
+      "housenumber" : 26,
+      "street" : "Aambeeldstraat",
+      "city" : "Amsterdam",
+      "postalCode" : "1021KB"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "020-3346498",
+      "email" : "info@hetlabamsterdam.nl",
+      "website" : "http:\/\/www.hetlabamsterdam.nl"
+    },
+    "id" : 584954405028266,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "friday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:30"
+      },
+      "tuesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "thursday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:30"
+      },
+      "wednesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.8515331000000002,
+      "latitude" : 52.392175599999987
+    },
+    "name" : "Het Lab Amsterdam",
+    "address" : {
+      "housenumber" : 32,
+      "street" : "Transformatorweg",
+      "city" : "Amsterdam",
+      "postalCode" : "1014AK"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "088-1236850",
+      "email" : "rijnboulder@mountain-network.nl",
+      "website" : "https:\/\/mountain-network.nl\/klimcentra\/locaties\/bouldercentrum-arnhem"
+    },
+    "id" : 372348346440312,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "21:00"
+      },
+      "tuesday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "wednesday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.9004651999999993,
+      "latitude" : 51.963087000000002
+    },
+    "name" : "RijnBoulder",
+    "address" : {
+      "housenumber" : 3,
+      "street" : "Olympus",
+      "city" : "Arnhem",
+      "postalCode" : "6832EL"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "076-7370319",
+      "email" : "info@boulderhalbruut.nl",
+      "website" : "https:\/\/www.boulderhalbruut.nl"
+    },
+    "id" : 795093490625638,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "tuesday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.7556900000000004,
+      "latitude" : 51.598244000000001
+    },
+    "name" : "Boulderhal Bruut",
+    "address" : {
+      "housenumber" : 66,
+      "postalCode" : "4815HT",
+      "street" : "Spinveld",
+      "city" : "Breda",
+      "postfix" : "A1"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "015-7600090",
+      "email" : "",
+      "website" : "http:\/\/www.delftsbleau.nl"
+    },
+    "id" : 229953813681973,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "22:30"
+      },
+      "friday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "22:30"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "tuesday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "22:30"
+      },
+      "thursday" : {
+        "opensAt" : "16:00",
+        "closesAt" : "22:30"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.3675287999999997,
+      "latitude" : 51.9946245
+    },
+    "name" : "Bouldercentrum Delfts Bleau",
+    "address" : {
+      "housenumber" : 15,
+      "street" : "Schieweg",
+      "city" : "Delft",
+      "postalCode" : "2627AN"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "070-2051144",
+      "email" : "info@boulderhaldecampus.nl",
+      "website" : "https:\/\/www.boulderhaldecampus.nl"
+    },
+    "id" : 1070364213080575,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.2543625999999994,
+      "latitude" : 52.049688600000003
+    },
+    "name" : "Boulderhal De Campus",
+    "address" : {
+      "housenumber" : 55,
+      "street" : "Kerketuinenweg",
+      "city" : "Den Haag",
+      "postalCode" : "2544CV"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "070-3599229",
+      "email" : "uithof@deklimmuur.nl",
+      "website" : "https:\/\/www.facebook.com\/bouldermuurdenhaag"
+    },
+    "id" : 1607556532902291,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "friday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:30"
+      },
+      "tuesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "thursday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:30"
+      },
+      "wednesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "22:30"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.2404599999999997,
+      "latitude" : 52.038623999999999
+    },
+    "name" : "Bouldermuur Den Haag",
+    "address" : {
+      "housenumber" : 10,
+      "street" : "Jaap Edenweg",
+      "city" : "Den Haag",
+      "postalCode" : "2544NL"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "040-2950488",
+      "email" : "eindhoven@monk.nl",
+      "website" : "https:\/\/monk.nl\/eindhoven"
+    },
+    "id" : 141835325863948,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.4586380999999999,
+      "latitude" : 51.443477299999998
+    },
+    "name" : "Monk Bouldergym Eindhoven",
+    "address" : {
+      "housenumber" : 1,
+      "postalCode" : "5616LV",
+      "street" : "Berkenstraat",
+      "city" : "Eindhoven",
+      "postfix" : "A"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "06-10968707",
+      "email" : "info@cubebouldergym.nl",
+      "website" : "https:\/\/www.cubebouldergym.nl\/"
+    },
+    "id" : 171422169614338,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "18:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "19:00"
+      },
+      "tuesday" : {
+        "opensAt" : "18:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "18:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "19:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 6.9036738999999994,
+      "latitude" : 52.223027999999999
+    },
+    "name" : "Cube Bouldergym",
+    "address" : {
+      "housenumber" : 49,
+      "street" : "Hoge Bothofstraat",
+      "city" : "Enschede",
+      "postalCode" : "7511ZA"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "050-2808444",
+      "email" : "info@gropo.nl",
+      "website" : "http:\/\/www.gropo.nl"
+    },
+    "id" : 489738057852685,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "11:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "11:00",
+        "closesAt" : "19:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 6.5897262999999997,
+      "latitude" : 53.230609600000001
+    },
+    "name" : "Gropo Bouldergym",
+    "address" : {
+      "housenumber" : 8,
+      "street" : "Ulgersmaweg",
+      "city" : "Groningen",
+      "postalCode" : "9731BS"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "071-5763623",
+      "email" : "info@boulderhalkunststof.nl",
+      "website" : "http:\/\/www.boulderhalkunststof.nl"
+    },
+    "id" : 703927943046364,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "tuesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "wednesday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.4810169999999996,
+      "latitude" : 52.145052
+    },
+    "name" : "Boulderhal Kunststof",
+    "address" : {
+      "housenumber" : 49,
+      "postalCode" : "2321BL",
+      "street" : "Rooseveltstraat",
+      "city" : "Leiden",
+      "postfix" : "E"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "024-7370460",
+      "email" : "boulderhal@gripnijmegen.nl",
+      "website" : "http:\/\/www.gripnijmegen.nl"
+    },
+    "id" : 1390917561234780,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "19:00"
+      },
+      "tuesday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "09:00",
+        "closesAt" : "19:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.8383910999999999,
+      "latitude" : 51.813086499999997
+    },
+    "name" : "Grip Boulderhal",
+    "address" : {
+      "housenumber" : 35,
+      "street" : "Kamerlingh Onnesstraat",
+      "city" : "Nijmegen",
+      "postalCode" : "6533HK"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "010-7171805",
+      "email" : "rotterdam@neoliet.nl",
+      "website" : "https:\/\/www.neoliet.nl\/rotterdam"
+    },
+    "id" : 1428076020777872,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "19:00"
+      },
+      "tuesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "19:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.4333141999999999,
+      "latitude" : 51.908203999999998
+    },
+    "name" : "Bolder Neoliet",
+    "address" : {
+      "housenumber" : 9,
+      "street" : "Keilestraat",
+      "city" : "Rotterdam",
+      "postalCode" : "3029BP"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "010-7371383",
+      "email" : "rotterdam@monk.nl",
+      "website" : "https:\/\/monk.nl\/rotterdam"
+    },
+    "id" : 587965061384595,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "23:00"
+      },
+      "tuesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "13:30",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 4.4732820000000002,
+      "latitude" : 51.941622000000002
+    },
+    "name" : "Monk Bouldergym Rotterdam",
+    "address" : {
+      "housenumber" : 183,
+      "street" : "Ceintuurbaan",
+      "city" : "Rotterdam",
+      "postalCode" : "3051KC"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "06-29327487",
+      "email" : "info@block013.nl",
+      "website" : "http:\/\/www.block013.nl"
+    },
+    "id" : 1100561023299101,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "tuesday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "18:00"
+      },
+      "wednesday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.0920671999999998,
+      "latitude" : 51.577022100000001
+    },
+    "name" : "Boulderhal Block013",
+    "address" : {
+      "housenumber" : 47,
+      "street" : "Lovense Kanaaldijk",
+      "city" : "Tilburg",
+      "postalCode" : "5013BJ"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "046-4526434",
+      "email" : "info@gravitonbouldergym.nl",
+      "website" : "http:\/\/www.gravitonbouldergym.nl"
+    },
+    "id" : 364724736889562,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "19:00"
+      },
+      "tuesday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "17:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "19:00"
+      },
+      "wednesday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.8579093999999996,
+      "latitude" : 51.002787599999998
+    },
+    "name" : "Graviton Bouldergym",
+    "address" : {
+      "housenumber" : 2,
+      "street" : "Geerweg",
+      "city" : "Sittard",
+      "postalCode" : "6135KC"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "030-3075750",
+      "email" : "info@boulderhalenergiehaven.nl",
+      "website" : "http:\/\/boulderhalenergiehaven.nl"
+    },
+    "id" : 173426196480537,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      },
+      "sunday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "tuesday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "14:00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10:00",
+        "closesAt" : "22:00"
+      },
+      "wednesday" : {
+        "opensAt" : "12:00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.0709244,
+      "latitude" : 52.099984599999999
+    },
+    "name" : "Boulderhal Energiehaven",
+    "address" : {
+      "housenumber" : 10,
+      "postalCode" : "3542AC",
+      "street" : "Elektronweg",
+      "city" : "Utrecht",
+      "postfix" : "A"
+    }
+  },
+  {
+    "contacts" : {
+      "phone" : "030-7370615",
+      "email" : "info@boulderhalsterk.nl",
+      "website" : "https:\/\/www.boulderhalsterk.nl"
+    },
+    "id" : 467734919966059,
+    "openingHours" : {
+      "monday" : {
+        "opensAt" : "12.00",
+        "closesAt" : "23:00"
+      },
+      "friday" : {
+        "opensAt" : "12.00",
+        "closesAt" : "23.00"
+      },
+      "sunday" : {
+        "opensAt" : "10.00",
+        "closesAt" : "23.00"
+      },
+      "tuesday" : {
+        "opensAt" : "12.00",
+        "closesAt" : "23:00"
+      },
+      "thursday" : {
+        "opensAt" : "12.00",
+        "closesAt" : "23:00"
+      },
+      "saturday" : {
+        "opensAt" : "10.00",
+        "closesAt" : "23.00"
+      },
+      "wednesday" : {
+        "opensAt" : "12.00",
+        "closesAt" : "23:00"
+      }
+    },
+    "coordinates" : {
+      "longitude" : 5.1083181,
+      "latitude" : 52.076385100000003
+    },
+    "name" : "Boulderhal Sterk",
+    "address" : {
+      "housenumber" : 4,
+      "street" : "Koningin Wilhelminalaan",
+      "city" : "Utrecht",
+      "postalCode" : "3527LD"
+    }
+  }
+]

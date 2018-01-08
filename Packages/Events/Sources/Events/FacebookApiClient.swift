@@ -7,14 +7,14 @@ public class FacebookApiClient {
     
     public init() { }
     
-    public func events(for id: String) -> Data? {
+    public func events(for id: CustomStringConvertible) -> Data? {
         guard let request = request(for: id),
             let data = perform(request: request).data else { return nil }
         
         return data
     }
     
-    private func request(for id: String) -> URLRequest? {
+    private func request(for id: CustomStringConvertible) -> URLRequest? {
         var urlComponents = URLComponents(string: "https://graph.facebook.com")!
         urlComponents.path += "/v2.11/\(id)"
         urlComponents.queryItems = [
