@@ -1,5 +1,6 @@
 public struct Gym: CustomStringConvertible, Codable {
     
+    let id: Int
     let name: String
     let address: Address
     let contacts: Contacts
@@ -7,14 +8,16 @@ public struct Gym: CustomStringConvertible, Codable {
     var coordinates: Coordinates?
     
     public init?(components: [String]) {
-        guard components.count == 23,
-            let address = Address(components: Array(components[1...5])),
-            let contacts = Contacts(components: Array(components[6...8])),
-            let openingHours = OpeningHoursCollection(components: Array(components[9...22])) else {
+        guard components.count == 24,
+            let id = Int(components[0]),
+            let address = Address(components: Array(components[2...6])),
+            let contacts = Contacts(components: Array(components[7...9])),
+            let openingHours = OpeningHoursCollection(components: Array(components[10...23])) else {
                 return nil
         }
         
-        name = components[0]
+        self.id = id
+        name = components[1]
         self.address = address
         self.contacts = contacts
         self.openingHours = openingHours
